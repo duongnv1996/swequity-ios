@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HMCalendarCell" customModule="AppStore" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oTR-4R-T20">
+                        <rect key="frame" x="0.0" y="4" width="100" height="92"/>
+                        <color key="backgroundColor" red="0.99607843137254903" green="0.90588235294117647" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GfA-Xn-sTp" customClass="HMShadowView" customModule="AppStore" customModuleProvider="target">
+                        <rect key="frame" x="4" y="4" width="92" height="92"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="GfA-Xn-sTp" secondAttribute="height" multiplier="1:1" id="mBA-tR-act"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                <color key="value" red="1" green="0.79215686269999996" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.0" height="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" red="0.99607843139999996" green="0.90588235289999997" blue="0.40000000000000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPB-Hc-sSc">
+                        <rect key="frame" x="28.5" y="38.5" width="43" height="23.5"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                        <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="xPB-Hc-sSc" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="3bt-ty-jIi"/>
+                <constraint firstItem="xPB-Hc-sSc" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="ABq-gU-mAU"/>
+                <constraint firstItem="oTR-4R-T20" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Gwd-9j-FrK"/>
+                <constraint firstItem="oTR-4R-T20" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="H2B-pl-JL7"/>
+                <constraint firstAttribute="trailing" secondItem="oTR-4R-T20" secondAttribute="trailing" id="IBE-wH-9JX"/>
+                <constraint firstItem="oTR-4R-T20" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="JdE-Vg-LCD"/>
+                <constraint firstAttribute="bottom" secondItem="oTR-4R-T20" secondAttribute="bottom" constant="4" id="ME0-il-Jos"/>
+                <constraint firstAttribute="trailing" secondItem="GfA-Xn-sTp" secondAttribute="trailing" constant="4" id="W5c-BL-yCx"/>
+                <constraint firstItem="oTR-4R-T20" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="ZQe-tW-sGq"/>
+                <constraint firstItem="GfA-Xn-sTp" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="fvx-N1-878"/>
+                <constraint firstItem="GfA-Xn-sTp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="gRj-f5-o1J"/>
+                <constraint firstItem="GfA-Xn-sTp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="mmI-rH-o6J"/>
+                <constraint firstAttribute="bottom" secondItem="GfA-Xn-sTp" secondAttribute="bottom" constant="4" id="rDc-aA-wLn"/>
+                <constraint firstItem="GfA-Xn-sTp" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="tHa-7v-EwT"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="98" height="102"/>
+            <connections>
+                <outlet property="dayLabel" destination="xPB-Hc-sSc" id="3ag-WD-q5e"/>
+                <outlet property="selectedView" destination="oTR-4R-T20" id="4TG-15-kcy"/>
+                <outlet property="todayView" destination="GfA-Xn-sTp" id="8hK-7M-fDN"/>
+            </connections>
+            <point key="canvasLocation" x="166.66666666666669" y="147.99107142857142"/>
+        </collectionViewCell>
+    </objects>
+</document>

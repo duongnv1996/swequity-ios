@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Controllers/Login/HMForgotPasswordVC.swift"
+            timestampString = "585912354.650007"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "didTappedPrivacyButton(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Develop.HMPrivacyAPIResponse) -&gt; () in Develop.HMForgotPasswordVC.didTappedPrivacyButton(__C.UIButton) -&gt; ()"
+                  moduleName = "Develop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rtc-hn360/Desktop/FreeLance/Gym/SwequityVN/SwequityVN/SwequityVN/Controllers/Login/HMForgotPasswordVC.swift"
+                  timestampString = "585912354.821574"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "51">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Develop.HMPrivacyAPIResponse) -&gt; () in Develop.HMForgotPasswordVC.didTappedPrivacyButton(__C.UIButton) -&gt; ()"
+                  moduleName = "Develop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rtc-hn360/Desktop/FreeLance/Gym/SwequityVN/SwequityVN/SwequityVN/Controllers/Login/HMForgotPasswordVC.swift"
+                  timestampString = "585912354.823293"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "58">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Controllers/Login/HMForgotPasswordVC.swift"
+            timestampString = "585912354.65007"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "didTappedTermButton(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Develop.HMTermAPIResponse) -&gt; () in Develop.HMForgotPasswordVC.didTappedTermButton(__C.UIButton) -&gt; ()"
+                  moduleName = "Develop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rtc-hn360/Desktop/FreeLance/Gym/SwequityVN/SwequityVN/SwequityVN/Controllers/Login/HMForgotPasswordVC.swift"
+                  timestampString = "585912354.828874"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "51">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Develop.HMTermAPIResponse) -&gt; () in Develop.HMForgotPasswordVC.didTappedTermButton(__C.UIButton) -&gt; ()"
+                  moduleName = "Develop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rtc-hn360/Desktop/FreeLance/Gym/SwequityVN/SwequityVN/SwequityVN/Controllers/Login/HMForgotPasswordVC.swift"
+                  timestampString = "585912354.830404"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "58">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

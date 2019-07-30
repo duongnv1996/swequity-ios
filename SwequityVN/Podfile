@@ -1,0 +1,89 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+use_frameworks!
+
+def shared_pods
+  
+  # Common Pod
+  pod 'Alamofire'
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'SVProgressHUD'
+  pod 'Kingfisher', '~> 5.0'
+  
+  # Used for RxSwift
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
+  pod 'RxDataSources', '~> 4.0'
+  
+  # Pod Google
+  pod 'GoogleSignIn'
+  
+  # Pod Firebase
+  pod 'Firebase/Core'
+  
+  # Pod Notification
+  pod 'OneSignal'
+  
+  # Pod PagerView
+  pod 'TYCyclePagerView'
+  
+  # Pod Charts
+  pod 'Charts'
+  
+  # Pod Calendar
+  pod 'JTAppleCalendar'
+  
+  # Pod Keyboard
+  pod 'IQKeyboardManagerSwift'
+  
+  # Pod Slide menu
+  pod 'SideMenu'
+  
+  # Pod Database
+  pod 'RealmSwift'
+  
+  # Pod Firebase Crashlytics
+  pod 'Fabric', '~> 1.9.0'
+  pod 'Crashlytics', '~> 3.12.0'
+  
+  # Pod Youtube videos
+  pod 'YoutubePlayerView'
+  
+  # Pod Facebook
+  pod 'FacebookCore', '~> 0.5.0'
+  pod 'FacebookLogin'
+  pod 'FacebookShare'
+  
+  # Pod Page Menu
+  pod 'Parchment'
+  
+end
+
+target 'AppStore' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+  # Pods for AppStore
+  shared_pods
+end
+
+target 'Develop' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+  
+  # Pods for Develop
+  shared_pods
+end
+
+target 'Staging' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+  
+  # Pods for Staging
+  shared_pods
+end
+
+target 'swequityOneSignal' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  pod 'OneSignal'
+  
+end
