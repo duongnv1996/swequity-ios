@@ -9,44 +9,236 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SwequityVN/Controllers/Login/HMForgotPasswordVC.swift"
-            timestampString = "585912354.650007"
+            filePath = "SwequityVN/Controllers/TrainingProgram/ExerciseProgram/HMExerciseProgramVC.swift"
+            timestampString = "588397536.983686"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "didTappedPrivacyButton(_:)"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
+            landmarkName = "HMExerciseProgramVC"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Controllers/Diary/Cell/HMTaskCell.swift"
+            timestampString = "588442425.842522"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "setData(entity:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Controllers/TrainingProgram/HMTrainingProgramVC.swift"
+            timestampString = "588442425.8428251"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "setupTableView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Controllers/Statistical/Charts/HMBodyChartsVC.swift"
+            timestampString = "588362730.3293411"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "setupCollectionView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Controllers/Statistical/Charts/HMBodyChartsVC.swift"
+            timestampString = "588362765.55592"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
+            landmarkName = "updateChartData(datas:)"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Develop.HMPrivacyAPIResponse) -&gt; () in Develop.HMForgotPasswordVC.didTappedPrivacyButton(__C.UIButton) -&gt; ()"
-                  moduleName = "Develop"
+                  symbolName = "Swequity.HMBodyChartsVC.(updateChartData in _6587A59F7025C5AEC7643D6013D355CE)(datas: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "Swequity"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rtc-hn360/Desktop/FreeLance/Gym/SwequityVN/SwequityVN/SwequityVN/Controllers/Login/HMForgotPasswordVC.swift"
-                  timestampString = "585912354.821574"
+                  urlString = "file:///Users/rtc-hn360/Desktop/FreeLance/Gym/SwequityVN/SwequityVN/SwequityVN/Controllers/Statistical/Charts/HMBodyChartsVC.swift"
+                  timestampString = "589800771.654595"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "51">
+                  startingLineNumber = "166"
+                  endingLineNumber = "166"
+                  offsetFromSymbolStart = "89">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Develop.HMPrivacyAPIResponse) -&gt; () in Develop.HMForgotPasswordVC.didTappedPrivacyButton(__C.UIButton) -&gt; ()"
-                  moduleName = "Develop"
+                  symbolName = "closure #1 (Swift.Int) -&gt; Charts.ChartDataEntry in Swequity.HMBodyChartsVC.(updateChartData in _6587A59F7025C5AEC7643D6013D355CE)(datas: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "Swequity"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rtc-hn360/Desktop/FreeLance/Gym/SwequityVN/SwequityVN/SwequityVN/Controllers/Login/HMForgotPasswordVC.swift"
-                  timestampString = "585912354.823293"
+                  urlString = "file:///Users/rtc-hn360/Desktop/FreeLance/Gym/SwequityVN/SwequityVN/SwequityVN/Controllers/Statistical/Charts/HMBodyChartsVC.swift"
+                  timestampString = "589800771.658149"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "58">
+                  startingLineNumber = "167"
+                  endingLineNumber = "167"
+                  offsetFromSymbolStart = "126">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Controllers/TrainingProgram/HMTrainingProgramVC.swift"
+            timestampString = "588442425.843437"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "fetchListProgram(programId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Controllers/TrainingProgram/HMTrainingProgramVC.swift"
+            timestampString = "588442425.8440191"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "320"
+            endingLineNumber = "320"
+            landmarkName = "numberOfItems(in:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Controllers/TrainingProgram/HMTrainingProgramVC.swift"
+            timestampString = "588442425.844281"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "fetchListProgram(programId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Controllers/Base/HMBaseVC.swift"
+            timestampString = "588363904.67151"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "invokeMenuButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Controllers/TrainingProgram/HMTrainingProgramVC.swift"
+            timestampString = "588442425.844581"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "455"
+            endingLineNumber = "455"
+            landmarkName = "didTapDeleteProgramButton()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Controllers/TrainingProgram/HMTrainingProgramVC.swift"
+            timestampString = "588442425.844842"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "setupCollectionView()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Develop.HMTrainingProgramVC.(setupCollectionView in _636E0BABF783798AD46A0638156CCC8B)() -&gt; ()"
+                  moduleName = "Develop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rtc-hn360/Desktop/FreeLance/Gym/SwequityVN/SwequityVN/SwequityVN/Controllers/TrainingProgram/HMTrainingProgramVC.swift"
+                  timestampString = "588364794.413825"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "520">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UICollectionView, Swift.Int, Develop.TrainingProgramCellModel&lt;Develop.HMProgramExDetailEntity&gt;) -&gt; __C.UICollectionViewCell in Develop.HMTrainingProgramVC.(setupCollectionView in _636E0BABF783798AD46A0638156CCC8B)() -&gt; ()"
+                  moduleName = "Develop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rtc-hn360/Desktop/FreeLance/Gym/SwequityVN/SwequityVN/SwequityVN/Controllers/TrainingProgram/HMTrainingProgramVC.swift"
+                  timestampString = "588364794.415571"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "220">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -57,46 +249,382 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SwequityVN/Controllers/Login/HMForgotPasswordVC.swift"
-            timestampString = "585912354.65007"
+            filePath = "SwequityVN/Controllers/TrainingProgram/HMTrainingProgramVC.swift"
+            timestampString = "588442425.845099"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "didTappedTermButton(_:)"
+            startingLineNumber = "251"
+            endingLineNumber = "251"
+            landmarkName = "invokeListButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Controllers/Diary/Add/HMAddProgramVC.swift"
+            timestampString = "588366272.0477819"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "invokeContinueButton(_:)"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Develop.HMTermAPIResponse) -&gt; () in Develop.HMForgotPasswordVC.didTappedTermButton(__C.UIButton) -&gt; ()"
-                  moduleName = "Develop"
+                  symbolName = "Swequity.HMAddProgramVC.invokeContinueButton(__C.UIButton) -&gt; ()"
+                  moduleName = "Swequity"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rtc-hn360/Desktop/FreeLance/Gym/SwequityVN/SwequityVN/SwequityVN/Controllers/Login/HMForgotPasswordVC.swift"
-                  timestampString = "585912354.828874"
+                  urlString = "file:///Users/rtc-hn360/Desktop/FreeLance/Gym/SwequityVN/SwequityVN/SwequityVN/Controllers/Diary/Add/HMAddProgramVC.swift"
+                  timestampString = "589800771.68191"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "51">
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "1473">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Develop.HMTermAPIResponse) -&gt; () in Develop.HMForgotPasswordVC.didTappedTermButton(__C.UIButton) -&gt; ()"
-                  moduleName = "Develop"
+                  symbolName = "closure #1 (Swequity.HMAddProgramAPIResponse) -&gt; () in Swequity.HMAddProgramVC.invokeContinueButton(__C.UIButton) -&gt; ()"
+                  moduleName = "Swequity"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rtc-hn360/Desktop/FreeLance/Gym/SwequityVN/SwequityVN/SwequityVN/Controllers/Login/HMForgotPasswordVC.swift"
-                  timestampString = "585912354.830404"
+                  urlString = "file:///Users/rtc-hn360/Desktop/FreeLance/Gym/SwequityVN/SwequityVN/SwequityVN/Controllers/Diary/Add/HMAddProgramVC.swift"
+                  timestampString = "589800771.685026"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "58">
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "201">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Controllers/Diary/Add/HMAddProgramVC.swift"
+            timestampString = "588366272.048093"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "invokeContinueButton(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swequity.HMAddProgramVC.invokeContinueButton(__C.UIButton) -&gt; ()"
+                  moduleName = "Swequity"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rtc-hn360/Desktop/FreeLance/Gym/SwequityVN/SwequityVN/SwequityVN/Controllers/Diary/Add/HMAddProgramVC.swift"
+                  timestampString = "589800771.693249"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "2105">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Swequity.HMUpdateTrainingProgramAPIResponse) -&gt; () in Swequity.HMAddProgramVC.invokeContinueButton(__C.UIButton) -&gt; ()"
+                  moduleName = "Swequity"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rtc-hn360/Desktop/FreeLance/Gym/SwequityVN/SwequityVN/SwequityVN/Controllers/Diary/Add/HMAddProgramVC.swift"
+                  timestampString = "589800771.696377"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "160">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Controllers/TrainingProgram/HMTrainingProgramVC.swift"
+            timestampString = "588442425.845414"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "379"
+            endingLineNumber = "379"
+            landmarkName = "didAddProgram(programId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swequity.HMTrainingProgramVC.didAddProgram(programId: Swift.Int) -&gt; ()"
+                  moduleName = "Swequity"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rtc-hn360/Desktop/FreeLance/Gym/SwequityVN/SwequityVN/SwequityVN/Controllers/TrainingProgram/HMTrainingProgramVC.swift"
+                  timestampString = "589800771.704827"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "379"
+                  endingLineNumber = "379"
+                  offsetFromSymbolStart = "99">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swequity.HMListProgramAPIResponse) -&gt; () in Swequity.HMTrainingProgramVC.didAddProgram(programId: Swift.Int) -&gt; ()"
+                  moduleName = "Swequity"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rtc-hn360/Desktop/FreeLance/Gym/SwequityVN/SwequityVN/SwequityVN/Controllers/TrainingProgram/HMTrainingProgramVC.swift"
+                  timestampString = "589800771.7075731"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "379"
+                  endingLineNumber = "379"
+                  offsetFromSymbolStart = "361">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Controllers/Statistical/HistoryImage/CompareImage/HMCompareImageVC.swift"
+            timestampString = "588442425.845858"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "viewForZooming(in:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Libraries/Services/Notification/HMOneSignalNotificationService.swift"
+            timestampString = "588442425.84626"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "registerOneSignal(launchOptions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Application/AppDelegate.swift"
+            timestampString = "588426153.84496"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Controllers/SetExercise/HMSetExerciseVC.swift"
+            timestampString = "589367595.414257"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "318"
+            endingLineNumber = "318"
+            landmarkName = "HMSetExerciseVC"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Controllers/TrainingProgram/ExerciseProgram/HMExerciseProgramVC.swift"
+            timestampString = "588704205.732281"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "fetchData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Develop.HMSessionDetailAPIResponse) -&gt; () in Develop.HMExerciseProgramVC.(fetchData in _C734EFD82D32F3E3CB3C506E8EBADEE6)() -&gt; ()"
+                  moduleName = "Develop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rtc-hn360/Desktop/FreeLance/Gym/SwequityVN/SwequityVN/SwequityVN/Controllers/TrainingProgram/ExerciseProgram/HMExerciseProgramVC.swift"
+                  timestampString = "588704608.9676729"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "172"
+                  endingLineNumber = "172"
+                  offsetFromSymbolStart = "267">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Develop.HMExerciseInSessionDetailEntity) -&gt; Swift.Optional&lt;Develop.ExCellEntity&gt; in closure #1 (Develop.HMSessionDetailAPIResponse) -&gt; () in Develop.HMExerciseProgramVC.(fetchData in _C734EFD82D32F3E3CB3C506E8EBADEE6)() -&gt; ()"
+                  moduleName = "Develop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rtc-hn360/Desktop/FreeLance/Gym/SwequityVN/SwequityVN/SwequityVN/Controllers/TrainingProgram/ExerciseProgram/HMExerciseProgramVC.swift"
+                  timestampString = "588704608.969309"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "173"
+                  endingLineNumber = "173"
+                  offsetFromSymbolStart = "38">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Controllers/Login/HMPrivacyVC.swift"
+            timestampString = "589800989.1955841"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swequity.HMPrivacyVC.viewDidLoad() -&gt; ()"
+                  moduleName = "Swequity"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rtc-hn360/Desktop/FreeLance/Gym/SwequityVN/SwequityVN/SwequityVN/Controllers/Login/HMPrivacyVC.swift"
+                  timestampString = "589800771.736433"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "352">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swequity.HMPrivacyAPIResponse) -&gt; () in Swequity.HMPrivacyVC.viewDidLoad() -&gt; ()"
+                  moduleName = "Swequity"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rtc-hn360/Desktop/FreeLance/Gym/SwequityVN/SwequityVN/SwequityVN/Controllers/Login/HMPrivacyVC.swift"
+                  timestampString = "589800771.741491"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "147">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Controllers/Menu/HMMenuVC.swift"
+            timestampString = "589800989.195678"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
+            landmarkName = "invokePrivacyButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Controllers/Login/HMPrivacyVC.swift"
+            timestampString = "589800989.195743"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Controllers/Login/HMLoginVC.swift"
+            timestampString = "589800989.195803"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "invokeGoogleLogin(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwequityVN/Controllers/Login/HMLoginVC.swift"
+            timestampString = "589800989.19586"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "invokeFacebookLogin(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

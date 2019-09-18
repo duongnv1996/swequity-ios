@@ -10,16 +10,23 @@ import UIKit
 
 protocol HMNutritionGoal002Delegate: NSObjectProtocol {
     func tapToAddFood2()
+    func tapToAddFavouriteFood3()
 }
 
 class HMNutritionGoal002Cell: UITableViewCell {
     
-    
+    // MARK: - Outlets
     @IBOutlet weak var subTitleLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var foodsStackView: UIStackView!
     @IBOutlet weak var caloLabel: UILabel!
     weak var delegate: HMNutritionGoal002Delegate?
+    
+    // Fav
+    @IBOutlet weak var leftStackView: UIStackView!
+    @IBOutlet weak var rightStackView: UIStackView!
+    
+    private var isFull:Bool = false
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,16 +48,10 @@ class HMNutritionGoal002Cell: UITableViewCell {
         subTitleLabel.text = dto.subTitleName
         caloLabel.text = dto.caloValue + " Cal"
         addLabelToStack(foods: dto.foods)
-        
+        addLabelToFavoriteStack(foods: dto.favFoods)
     }
     
-    private func addLabelToStack(foods: [String]) {
-        for food in foods {
-            foodsStackView.addArrangedSubview(initStackView(value: food))
-        }
-        foodsStackView.addArrangedSubview(UIView())
-    }
-    
+    // MARK: - Private methods
     private func initStackView(value: String) -> UIStackView {
         //Image View
         let imageView = UIImageView()
@@ -89,7 +90,37 @@ class HMNutritionGoal002Cell: UITableViewCell {
         return stackView
     }
     
+    private func addLabelToStack(foods: [HMFoodDetailEntity]) {
+        if (!self.isFull) {
+            for food in foods {
+                foodsStackView.addArrangedSubview(initStackView(value: food.name))
+            }
+            self.isFull = true
+            foodsStackView.addArrangedSubview(UIView())
+        }
+    }
+    
+    private func addLabelToFavoriteStack(foods: [HMFoodDetailEntity]) {
+        if (!self.isFull) {
+            for (index, food) in foods.enumerated() {
+                if index % 2 == 0 {
+                    leftStackView.addArrangedSubview(initStackView(value: food.name))
+                } else {
+                    rightStackView.addArrangedSubview(initStackView(value: food.name))
+                }
+                self.isFull = true
+            }
+            leftStackView.addArrangedSubview(UIView())
+            rightStackView.addArrangedSubview(UIView())
+        }
+    }
+    // MARK: - Actions
     @IBAction func tapToAddFood(_ sender: Any) {
         delegate?.tapToAddFood2()
     }
+    
+    @IBAction func tapToAddFavoriteFood(_ sender: Any) {
+        delegate?.tapToAddFavouriteFood3()
+    }
+    
 }

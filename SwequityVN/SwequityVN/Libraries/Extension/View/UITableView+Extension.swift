@@ -74,14 +74,14 @@ extension UITableView {
         scrollToRow(at: indexPath, at: .top, animated: animated)
     }
     
-    func reloadCellAt(section: Int = 0, row: Int) {
+    func reloadCellAt(section: Int = 0, row: Int, with animation: UITableView.RowAnimation = .none) {
         if let indexPath = validIndexPath(section: section, row: row) {
-            reloadRows(at: [indexPath], with: .fade)
+            reloadRows(at: [indexPath], with: animation)
         }
     }
     
-    func reloadSectionAt(index: Int) {
-        reloadSections(IndexSet(integer: index), with: .fade)
+    func reloadSectionAt(index: Int, with animation: UITableView.RowAnimation = .none) {
+        reloadSections(IndexSet(integer: index), with: animation)
     }
     
     func change(bottomInset value: CGFloat) {

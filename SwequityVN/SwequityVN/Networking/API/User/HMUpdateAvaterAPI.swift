@@ -12,7 +12,7 @@ import Alamofire
 
 class HMUpdateAvaterAPI: HMAPIOperation<HMUpdateAvaterAPIResponse> {
     init(image: Data) {
-        super.init(request: HMAPIRequest(name: "Update avatar", path: HMURLConstants.updateProfileAPIPath, method: .post, parameters:
+        super.init(request: HMAPIRequest(name: "Update avatar", path: HMURLConstants.updateAvatarAPIPath, method: .post, parameters:
             .multipart(data: image, parameters: [
                 "id": HMSharedData.userId!
                 ], name: "img", fileName: "\(HMSharedData.userId!)_image.jpg", mimeType: "jpg")))

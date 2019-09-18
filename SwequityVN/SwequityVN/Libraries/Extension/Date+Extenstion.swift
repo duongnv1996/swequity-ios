@@ -38,7 +38,7 @@ extension Date {
     
     static let dateFormat = "yyyy-MM-dd"
     static let dateFormatS = "dd/MM/yyyy"
-    static let dateFormatM = "dd/mm/yyyy"
+//    static let dateFormatM = "dd/mm/yyyy"
     static let dateFormatDisplay = "dd.MM.yyyy - HH:mm"
     static let dateTimeFormat = "HH:mm dd/MM/yyyy"
     static let hourFormat = "hh:mm"
@@ -187,6 +187,14 @@ extension Date {
     
     public static func hourBetween(start: Date, end: Date) -> Int {
         return Calendar.current.dateComponents([.hour], from: start, to: end).hour!
+    }
+    
+    public static func minuteBetween(start: Date, end: Date) -> Int {
+        return Calendar.current.dateComponents([.minute], from: start, to: end).minute!
+    }
+    
+    public static func secondBetween(start: Date, end: Date) -> Int {
+        return Calendar.current.dateComponents([.second], from: start, to: end).second!
     }
     
     func add(day: Int? = nil, month: Int? = nil, year: Int? = nil, hour: Int? = nil, minute: Int? = nil, second: Int? = nil, calendar: Calendar = Date.currentCalendar) -> Date? {

@@ -19,6 +19,6 @@ struct HMExDetailEntity: Decodable {
     let img: String
     let date: String
     let active: String
-    let is_fav: String
-    let favorite: Bool?
+    let is_fav: HMFavouriteType?
+    let is_favourite: HMFavouriteType?
 }

@@ -19,6 +19,26 @@ class HMCameraPhotoService: NSObject {
     // MARK: - Closures
     private var didPickImage: ((_ image: UIImage?) -> Void)?
     
+    func showActionSheetPickupImage(canEdit: Bool = false, didPickImage: @escaping ((_ image: UIImage?) -> Void)) {
+        
+        let cameraButton = SystemAlertButtonData(title: "Chụp ảnh mới", style: UIAlertAction.Style.default, handler: ({ [weak self] in
+            self?.showScreenOf(type: .camera, canEdit: canEdit, didDenyPermission: {
+                UIAlertController.showQuickSystemAlert(title: "Thông báo", message: "Bạn chưa cấp quyền truy cập vào camera")
+            }, didPickImage: didPickImage)
+        }))
+        
+        let photoButton = SystemAlertButtonData(title: "Chọn ảnh có sẵn", style: UIAlertAction.Style.default, handler: ({ [weak self] in
+            self?.showScreenOf(type: .photoLibrary, canEdit: canEdit, didDenyPermission: {
+                UIAlertController.showQuickSystemAlert(title: "Thông báo", message: "Bạn chưa cấp quyền truy cập vào thư viện ảnh")
+            }, didPickImage: didPickImage)
+        }))
+        
+        let cancelButton = SystemAlertButtonData(title: "Huỷ", style: UIAlertAction.Style.cancel, handler: ({
+        }))
+        
+        UIAlertController.showSystemActionSheet(optionButtons: [cameraButton,photoButton], cancelButton: cancelButton)
+    }
+    
     func showScreenOf(type: HMCameraPhotoServiceType, canEdit: Bool = false, didDenyPermission: (() -> Void)? = nil, didPickImage: @escaping ((_ image: UIImage?) -> Void)) {
         func moveToImagePickerScreen() {
             let sourceType: UIImagePickerController.SourceType = type == .camera ? .camera : .photoLibrary

@@ -11,7 +11,7 @@ import RealmSwift
 
 class HMRealmService {
     // MARK: - Singleton
-    static var instance = HMRealmService()
+    static let instance = HMRealmService()
     
     // MARK: - Supporting function
     func write(_ handler: ((_ realm: Realm) -> Void)) {

@@ -19,11 +19,9 @@ class HMNutritionGoal005Cell: UITableViewCell {
     @IBOutlet weak var kindFood001Label: UILabel!
     @IBOutlet weak var kindFood002Label: UILabel!
     @IBOutlet weak var kindFood003Label: UILabel!
-    @IBOutlet weak var kindFood004Label: UILabel!
     @IBOutlet weak var valueFood001Label: UILabel!
     @IBOutlet weak var valueFood002Label: UILabel!
     @IBOutlet weak var valueFood003Label: UILabel!
-    @IBOutlet weak var valueFood004Label: UILabel!
     
     weak var delegate: HMNutritionGoal005Delegate?
     
@@ -45,20 +43,18 @@ class HMNutritionGoal005Cell: UITableViewCell {
     func setUpData(dto: HMNutritionGoal005Entity) {
         titleLabel.text = dto.titleName
         caloLabel.text = dto.caloValue + " Cal"
-        if dto.elementFoods.count == 4 {
+        if dto.elementFoods.count == 3 {
             kindFood001Label.text = dto.elementFoods[0].titleName
             kindFood002Label.text = dto.elementFoods[1].titleName
             kindFood003Label.text = dto.elementFoods[2].titleName
-            kindFood004Label.text = dto.elementFoods[3].titleName
             valueFood001Label.text = getValue(element: dto.elementFoods[0])
             valueFood002Label.text = getValue(element: dto.elementFoods[1])
             valueFood003Label.text = getValue(element: dto.elementFoods[2])
-            valueFood004Label.text = getValue(element: dto.elementFoods[3])
         }
     }
     
     private func getValue(element: ElementFood) -> String {
-        return element.percent + "% - " + element.calo + " Cal"
+        return  "\(element.percent)% - \(element.calo) Cal"
     }
     
     @IBAction func tapToEdit(_ sender: Any) {

@@ -20,9 +20,12 @@ class HMVerifyCodeAPI: HMAPIOperation<HMVerifyCodeAPIResponse> {
 struct HMVerifyCodeAPIResponse: HMAPIResponseProtocol {
     var errorId: Int
     var message: String
+    var verifyCode: Int
     
     init(json: JSON) {
         errorId = json["errorId"].int ?? 0
         message = json["message"].string ?? ""
+        
+        verifyCode = json["data"].int ?? 0
     }
 }

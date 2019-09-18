@@ -9,10 +9,18 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HMTrainingProgramSlideCell" customModule="AppStore" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HMTrainingProgramSlideCell" customModule="Develop" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="312" height="92"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -21,7 +29,66 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fpN-Gi-hIH">
                         <rect key="frame" x="0.0" y="0.0" width="312" height="92"/>
-                        <color key="backgroundColor" red="1" green="0.79215686269999996" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Thiết lập thời gian tập luyện" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uhs-cm-rwN">
+                                <rect key="frame" x="15" y="8" width="247" height="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="updateProgramName:" destination="gTV-IL-0wX" eventType="editingDidEnd" id="XYW-lM-fd6"/>
+                                </connections>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zfb-UF-yNg">
+                                <rect key="frame" x="14" y="42.5" width="284" height="27.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02/11/2018" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syg-u8-odH">
+                                        <rect key="frame" x="0.0" y="0.0" width="142" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09/11/2019" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bkq-g8-oKQ">
+                                        <rect key="frame" x="142" y="0.0" width="142" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_arrow_right" translatesAutoresizingMaskIntoConstraints="NO" id="ZLu-av-KET">
+                                <rect key="frame" x="146" y="46.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="bNO-xa-str"/>
+                                    <constraint firstAttribute="width" constant="20" id="qED-rY-Iox"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wR-7v-HCT">
+                                <rect key="frame" x="276" y="12" width="12" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="9Ia-E1-ZgT"/>
+                                    <constraint firstAttribute="width" constant="12" id="nDp-oM-Hwf"/>
+                                </constraints>
+                                <state key="normal" image="icon_delete_button"/>
+                                <connections>
+                                    <action selector="didTapDeleteProgramButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Cxf-Ds-Zhu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.77647058823529413" blue="0.027450980392156862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Uhs-cm-rwN" firstAttribute="leading" secondItem="fpN-Gi-hIH" secondAttribute="leading" constant="15" id="8ck-Lq-Qy1"/>
+                            <constraint firstAttribute="trailing" secondItem="zfb-UF-yNg" secondAttribute="trailing" constant="14" id="AOY-QZ-vcT"/>
+                            <constraint firstItem="zfb-UF-yNg" firstAttribute="leading" secondItem="fpN-Gi-hIH" secondAttribute="leading" constant="14" id="Emt-hq-YNI"/>
+                            <constraint firstItem="ZLu-av-KET" firstAttribute="centerY" secondItem="zfb-UF-yNg" secondAttribute="centerY" id="MgB-Vm-8c8"/>
+                            <constraint firstAttribute="trailing" secondItem="Uhs-cm-rwN" secondAttribute="trailing" constant="50" id="Onb-lF-XmH"/>
+                            <constraint firstItem="ZLu-av-KET" firstAttribute="centerX" secondItem="zfb-UF-yNg" secondAttribute="centerX" id="OsA-XO-3eP"/>
+                            <constraint firstItem="Uhs-cm-rwN" firstAttribute="top" secondItem="fpN-Gi-hIH" secondAttribute="top" constant="8" id="RBQ-S4-FSj"/>
+                            <constraint firstAttribute="bottom" secondItem="zfb-UF-yNg" secondAttribute="bottom" constant="22" id="auY-hY-RKa"/>
+                            <constraint firstAttribute="trailing" secondItem="7wR-7v-HCT" secondAttribute="trailing" constant="24" id="bL5-t4-XLE"/>
+                            <constraint firstItem="zfb-UF-yNg" firstAttribute="top" secondItem="Uhs-cm-rwN" secondAttribute="bottom" constant="4.5" id="dyo-5S-pTJ"/>
+                            <constraint firstItem="7wR-7v-HCT" firstAttribute="top" secondItem="fpN-Gi-hIH" secondAttribute="top" constant="12" id="rlk-j9-XiC"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -38,7 +105,17 @@
                     <real key="value" value="6"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="deleteButton" destination="7wR-7v-HCT" id="9lN-bI-bMh"/>
+                <outlet property="endDateLabel" destination="Bkq-g8-oKQ" id="EHe-rs-LDy"/>
+                <outlet property="startDateLabel" destination="syg-u8-odH" id="9vr-X1-KUm"/>
+                <outlet property="titleLabel" destination="Uhs-cm-rwN" id="77j-12-Bqk"/>
+            </connections>
             <point key="canvasLocation" x="321.73913043478262" y="133.92857142857142"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="icon_arrow_right" width="21" height="20"/>
+        <image name="icon_delete_button" width="16" height="16"/>
+    </resources>
 </document>

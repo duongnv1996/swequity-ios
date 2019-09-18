@@ -19,6 +19,9 @@ class HMNutritionGoal003Cell: UITableViewCell {
     @IBOutlet weak var leftStackView: UIStackView!
     @IBOutlet weak var rightStackView: UIStackView!
     @IBOutlet weak var titleLabel: UILabel!
+    
+    var isFull:Bool = false
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // remove separator
@@ -39,17 +42,19 @@ class HMNutritionGoal003Cell: UITableViewCell {
         addLabelToStack(foods: dto.foods)
     }
     
-    private func addLabelToStack(foods: [String]) {
-        for (index, food) in foods.enumerated() {
-            if index % 2 == 0 {
-                leftStackView.addArrangedSubview(initStackView(value: food))
-            } else {
-                rightStackView.addArrangedSubview(initStackView(value: food))
+    private func addLabelToStack(foods: [HMFoodDetailEntity]) {
+        if (!self.isFull) {
+            for (index, food) in foods.enumerated() {
+                if index % 2 == 0 {
+                    leftStackView.addArrangedSubview(initStackView(value: food.name))
+                } else {
+                    rightStackView.addArrangedSubview(initStackView(value: food.name))
+                }
+                self.isFull = true
             }
-            
+            leftStackView.addArrangedSubview(UIView())
+            rightStackView.addArrangedSubview(UIView())
         }
-        leftStackView.addArrangedSubview(UIView())
-        rightStackView.addArrangedSubview(UIView())
     }
     
     private func initStackView(value: String) -> UIStackView {

@@ -17,5 +17,17 @@ struct HMSessionExDetailEntity: Decodable {
     let date_ex: String
     let date_app: String
     let active: String
-    let listEx: Array<HMExerciseInSessionDetailEntity>?
+    let number_ex: Int?
+    
+    init() {
+        id = "0"
+        program_user_set_id = ""
+        user_id = ""
+        name = ""
+        date = ""
+        date_ex = ""
+        date_app = ""
+        active = ""
+        number_ex = 0
+    }
 }

@@ -7,24 +7,38 @@
 //
 
 import UIKit
+import WebKit
 
 class HMNotificationDetailVC: HMBaseVC {
 
+    // MARK: - Outlets
+    @IBOutlet weak var notificationImageView: UIImageView!
+    @IBOutlet weak var notificationTitleLabel: UILabel!
+    @IBOutlet weak var webContentView: WKWebView!
+    
+    // MARK: - Variables
+    var idNotification: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        fetchData()
+        titleScreen = "Thông báo"
+        self.webContentView.scrollView.isScrollEnabled = false
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Management data
+    private func fetchData() {
+        HMNotificationDetailAPI(id: idNotification).execute(target: self, success: { (response) in
+        self.notificationTitleLabel.text = response.notificationDetail?.title
+        self.webContentView.loadHTMLString(response.notificationDetail?.content ?? "", baseURL: nil)
+        }, failure: { (error) in
+        
+        })
     }
-    */
-
 }

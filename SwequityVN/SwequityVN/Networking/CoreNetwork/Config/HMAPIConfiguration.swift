@@ -14,9 +14,9 @@ class HMAPIConfiguration {
 
     static var baseUrl: String {
         #if DEVELOP || STAGING
-        return "http://swequitydemo.site/api"
+        return "http://mumgo.vn/swequity/api"
         #else
-        return "http://swequitydemo.site/api"
+        return "http://mumgo.vn/swequity/api"
         #endif
     }
     

@@ -19,8 +19,7 @@ class HMPolygonView: UIView {
     // MARK: - Setup
     override func awakeFromNib() {
         super.awakeFromNib()
-        clipsToBounds = false
-        layer.masksToBounds = false
+//        layer.masksToBounds = masksToBounds
         backgroundColor = .clear
     }
     
@@ -28,19 +27,12 @@ class HMPolygonView: UIView {
         super.draw(rect)
         
         let roundedPath = roundedPolygonPath(rect: rect, lineWidth: lineWidth, sides: sides, cornerRadius: cornerRadius, rotationOffset: rotationOffset)
+        fillColor.setFill()
+        roundedPath.fill()
         
-        let newLayer = CAShapeLayer()
-        newLayer.frame = CGRect(x: 0.0, y: 0.0, width: roundedPath.bounds.width + lineWidth, height: roundedPath.bounds.height + lineWidth)
-        newLayer.path = roundedPath.cgPath
-        newLayer.lineWidth = lineWidth
-        newLayer.lineJoin = CAShapeLayerLineJoin.round
-        newLayer.lineCap = CAShapeLayerLineCap.round
-        if let borderColor = borderColor {
-            newLayer.strokeColor = borderColor.cgColor
-        }
-        newLayer.fillColor = fillColor.cgColor
-
-        layer.insertSublayer(newLayer, at: 0)
+        let mask = CAShapeLayer()
+        mask.path = roundedPath.cgPath
+        layer.mask = mask
     }
     
     public func roundedPolygonPath(rect: CGRect, lineWidth: CGFloat, sides: NSInteger, cornerRadius: CGFloat, rotationOffset: CGFloat) -> UIBezierPath {

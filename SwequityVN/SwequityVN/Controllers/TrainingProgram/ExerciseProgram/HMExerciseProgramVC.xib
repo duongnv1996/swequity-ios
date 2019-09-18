@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HMExerciseProgramVC" customModule="Develop" customModuleProvider="target">
+            <connections>
+                <outlet property="linkedExButton" destination="cGz-Q7-5iF" id="XxB-kd-Gfn"/>
+                <outlet property="startTrainingButton" destination="69j-9U-3nE" id="3VF-dK-1Cd"/>
+                <outlet property="tableView" destination="und-zc-0EZ" id="ZSs-mL-oPD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSf-EW-PCI">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="und-zc-0EZ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="und-zc-0EZ" secondAttribute="trailing" id="8kQ-cd-8ZG"/>
+                        <constraint firstItem="und-zc-0EZ" firstAttribute="centerY" secondItem="BSf-EW-PCI" secondAttribute="centerY" id="Cco-Eu-y5p"/>
+                        <constraint firstAttribute="bottom" secondItem="und-zc-0EZ" secondAttribute="bottom" id="DZ8-3C-Ohy"/>
+                        <constraint firstItem="und-zc-0EZ" firstAttribute="centerX" secondItem="BSf-EW-PCI" secondAttribute="centerX" id="eY7-nI-Tgu"/>
+                        <constraint firstItem="und-zc-0EZ" firstAttribute="leading" secondItem="BSf-EW-PCI" secondAttribute="leading" id="pSS-z6-H25"/>
+                        <constraint firstItem="und-zc-0EZ" firstAttribute="top" secondItem="BSf-EW-PCI" secondAttribute="top" id="wbQ-7b-RrN"/>
+                    </constraints>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69j-9U-3nE" customClass="HMShadowButton" customModule="Develop" customModuleProvider="target">
+                    <rect key="frame" x="44" y="772" width="326" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="QGl-xL-ZZk"/>
+                    </constraints>
+                    <state key="normal" title="BẮT ĐẦU BUỔI TẬP">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="0.0" height="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" red="0.1960784314" green="0.21176470589999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                            <color key="value" red="1" green="0.79215686269999996" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="invokeStartTrainingButton:" destination="-1" eventType="touchUpInside" id="eUB-Yx-zv0"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGz-Q7-5iF" customClass="HMShadowButton" customModule="Develop" customModuleProvider="target">
+                    <rect key="frame" x="44" y="772" width="326" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="fpi-Iq-HS0"/>
+                    </constraints>
+                    <state key="normal" title="LIÊN KẾT NGAY">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="0.0" height="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" red="0.1960784314" green="0.21176470589999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                            <color key="value" red="1" green="0.79215686269999996" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="invokeLinkedEx:" destination="-1" eventType="touchUpInside" id="28Y-rM-Vbv"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="BSf-EW-PCI" secondAttribute="bottom" id="7mh-Ml-frI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cGz-Q7-5iF" secondAttribute="trailing" constant="44" id="9mn-lu-TTq"/>
+                <constraint firstItem="BSf-EW-PCI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Q5u-DK-hEU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cGz-Q7-5iF" secondAttribute="bottom" constant="40" id="TNY-cc-Vih"/>
+                <constraint firstItem="BSf-EW-PCI" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="bO7-Gs-Jef"/>
+                <constraint firstItem="69j-9U-3nE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44" id="cer-VK-oC5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="69j-9U-3nE" secondAttribute="trailing" constant="44" id="f2W-iw-Jpt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BSf-EW-PCI" secondAttribute="trailing" id="fLB-yU-VSz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="69j-9U-3nE" secondAttribute="bottom" constant="40" id="heq-Z9-BvK"/>
+                <constraint firstItem="BSf-EW-PCI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="kAY-ma-Gy2"/>
+                <constraint firstItem="cGz-Q7-5iF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44" id="u5C-oZ-h8o"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

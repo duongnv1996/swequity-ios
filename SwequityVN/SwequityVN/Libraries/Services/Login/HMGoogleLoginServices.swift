@@ -13,27 +13,24 @@ class HMGoogleLoginServices: NSObject, HMLoginServices {
     
     // MARK: - Variables
     weak var delegate: HMLoginServicesDelegate?
-    private let clientID = "1020640838566-dfdo6r1kftsvhsi451ikbkr0qu754rvm.apps.googleusercontent.com"
-    private let scopes = [""]
+    private let clientID = "585025639656-c9rf4sbb31d9ivln3tansinhrngkl2s5.apps.googleusercontent.com"
+    private let scopes = ["https://www.googleapis.com/auth/userinfo.profile",
+                          "https://www.googleapis.com/auth/userinfo.email"]
     
     // MARK:- Init
     required init(target viewController: UIViewController & HMLoginServicesDelegate) {
         super.init()
-        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().uiDelegate = viewController as? GIDSignInUIDelegate
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().clientID = clientID
-        GIDSignIn.sharedInstance()?.scopes.append(scopes)
+        GIDSignIn.sharedInstance().scopes = scopes
         
         delegate = viewController
     }
     
     // MARK: - Action
     func doLogin() {
-        if (GIDSignIn.sharedInstance().hasAuthInKeychain()) {
-            print("Signed in")
-        } else {
-            GIDSignIn.sharedInstance()?.signIn()
-        }
+        GIDSignIn.sharedInstance()?.signIn()
     }
 }
 
@@ -56,9 +53,4 @@ extension HMGoogleLoginServices: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
               withError error: Error!) {
     }
-}
-
-// MARK: - GIDSignInUIDelegate
-extension HMGoogleLoginServices: GIDSignInUIDelegate {
-
 }

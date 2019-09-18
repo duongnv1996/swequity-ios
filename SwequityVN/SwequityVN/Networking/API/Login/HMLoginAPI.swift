@@ -14,8 +14,7 @@ class HMLoginAPI: HMAPIOperation<HMLoginAPIResponse> {
     init(username: String, password: String) {
         super.init(request: HMAPIRequest(name: "Login", path: HMURLConstants.loginAPIPath, method: .get, parameters: .body([
             "username": username,
-            "password": password,
-            "type": HMConstants.userType])))
+            "password": password])))
     }
 }
 
@@ -31,22 +30,18 @@ struct HMLoginAPIResponse: HMAPIResponseProtocol {
         do {
             let data = try json["data"].rawData(options: .prettyPrinted)
             userInfo = try JSONDecoder().decode(HMUserInfoEntity.self, from: data)
-//            HMSharedData.driverId = driverInfo?.id
-//            HMSharedData.serviceId = driverInfo?.service_id
-//            HMSharedData.active = driverInfo?.active
-//            HMRealmService.instance.write { (realm) in
-//                let userInfoRealm = HMUserInfoRealm()
-//                userInfoRealm.userId = driverInfo?.id
-//                userInfoRealm.userName = driverInfo?.name
-//                userInfoRealm.avatar = driverInfo?.avatar
-//                userInfoRealm.phone = driverInfo?.phone
-//                userInfoRealm.email = driverInfo?.email
-//                userInfoRealm.amount = driverInfo?.account
-//                userInfoRealm.rating = driverInfo?.account
-//                userInfoRealm.bienso = driverInfo?.bienso
-//                userInfoRealm.serviceId = driverInfo?.service_id
-//                realm.add(userInfoRealm, update: true)
-//            }
+            HMSharedData.userId = userInfo?.id
+            HMSharedData.active = userInfo?.active
+            HMRealmService.instance.write { (realm) in
+                let userInfoRealm = HMUserInfoRealm()
+                userInfoRealm.userId = userInfo?.id
+                userInfoRealm.userName = userInfo?.name
+                userInfoRealm.avatar = userInfo?.avatar
+                userInfoRealm.phone = userInfo?.phone
+                userInfoRealm.email = userInfo?.email
+                userInfoRealm.type = userInfo?.type
+                realm.add(userInfoRealm, update: true)
+            }
             HMOneSignalNotificationService.shared.sendTag(userId: userInfo?.id)
         } catch {
             print(error)

@@ -68,4 +68,74 @@ class HMSharedData {
             UserDefaults.standard.set(value, forKey: "UserId")
         }
     }
+    
+    // Time start
+    class var timeStartEx: Date? {
+        get {
+            return (UserDefaults.standard.value(forKey: "TimeStartEx") as? Date)
+        }
+        set(value) {
+            UserDefaults.standard.set(value, forKey: "TimeStartEx")
+        }
+    }
+    
+    // Time start with ex
+    class var timeStartWithEx: Date? {
+        get {
+            return (UserDefaults.standard.value(forKey: "TimeStartWithEx") as? Date)
+        }
+        set(value) {
+            UserDefaults.standard.set(value, forKey: "TimeStartWithEx")
+        }
+    }
+    
+    // Total number exercise
+    class var numberExercise: String? {
+        get {
+            return (UserDefaults.standard.value(forKey: "NumberEx") as? String)
+        }
+        set(value) {
+            UserDefaults.standard.set(value, forKey: "NumberEx")
+        }
+    }
+    
+    // Total relax time
+    class var relaxTime: String? {
+        get {
+            return (UserDefaults.standard.value(forKey: "RelaxTime") as? String)
+        }
+        set(value) {
+            UserDefaults.standard.set(value, forKey: "RelaxTime")
+        }
+    }
+    
+    // ExerciseHadTrain
+    class var exerciseHadTrain: [String: [String: String]]? {
+        get {
+            return (UserDefaults.standard.value(forKey: "ExerciseHadTrain") as? [String: [String: String]])
+        }
+        set(value) {
+            UserDefaults.standard.set(value, forKey: "ExerciseHadTrain")
+        }
+    }
+    
+    // Link exercise
+    class var linkExercise: [String: String]? {
+        get {
+            return (UserDefaults.standard.value(forKey: "LinkEx") as? [String: String])
+        }
+        set(value) {
+            UserDefaults.standard.set(value, forKey: "LinkEx")
+        }
+    }
+    
+    // Root link exercise
+    class var rootEx: String? {
+        get {
+            return (UserDefaults.standard.value(forKey: "RootLinkEx") as? String)
+        }
+        set(value) {
+            UserDefaults.standard.set(value, forKey: "RootLinkEx")
+        }
+    }
 }

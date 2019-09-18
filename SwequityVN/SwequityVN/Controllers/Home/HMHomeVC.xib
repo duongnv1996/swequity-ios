@@ -23,8 +23,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HMHomeVC" customModule="AppStore" customModuleProvider="target">
             <connections>
+                <outlet property="avatar" destination="bwo-As-8fG" id="a4b-ex-zqA"/>
                 <outlet property="chartView" destination="CJ1-ew-ufe" id="kjh-PK-Bro"/>
+                <outlet property="fatLB" destination="t75-qA-Qys" id="Q4Q-Bz-0gA"/>
+                <outlet property="numberImageLB" destination="qsG-9I-IjH" id="kLz-kP-cKi"/>
+                <outlet property="premiumLB" destination="zQ8-GQ-uot" id="H3Q-WK-zoZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weightLB" destination="Jam-xh-3fg" id="C4N-5f-A1d"/>
+                <outlet property="welcomeLB" destination="035-Ui-05M" id="lyW-kj-hTO"/>
+                <outlet property="workoutExLB" destination="vh4-NG-Ydx" id="Q2J-de-r43"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -41,11 +48,11 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YCt-ud-Vxy" customClass="HMPolygonView" customModule="AppStore" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                     <subviews>
-                                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bwo-As-8fG">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bwo-As-8fG">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         </imageView>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.25882352939999997" green="0.66666666669999997" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="1" green="0.79215686269999996" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="bwo-As-8fG" secondAttribute="trailing" id="45k-mY-rrN"/>
                                         <constraint firstAttribute="width" constant="80" id="Jfm-Xw-QtQ"/>
@@ -59,7 +66,7 @@
                                             <integer key="value" value="6"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                            <color key="value" red="0.25882352939999997" green="0.66666666669999997" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="value" red="1" green="0.79215686269999996" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="number" keyPath="rotationOffset">
                                             <real key="value" value="11"/>
@@ -202,13 +209,23 @@ Workouts</string>
                                                         </view>
                                                     </subviews>
                                                 </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eh9-BY-KmM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="174" height="70"/>
+                                                    <connections>
+                                                        <action selector="invokeWorkoutButton:" destination="-1" eventType="touchUpInside" id="boP-mZ-wnG"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="FwT-9Q-bJ2" firstAttribute="top" secondItem="JAX-hQ-8d4" secondAttribute="top" constant="6" id="4EY-iS-5h4"/>
                                                 <constraint firstAttribute="trailing" secondItem="FwT-9Q-bJ2" secondAttribute="trailing" constant="10" id="9wr-am-55J"/>
+                                                <constraint firstItem="Eh9-BY-KmM" firstAttribute="top" secondItem="JAX-hQ-8d4" secondAttribute="top" id="KMN-1g-86v"/>
                                                 <constraint firstAttribute="bottom" secondItem="FwT-9Q-bJ2" secondAttribute="bottom" constant="6" id="R7X-qP-S7i"/>
+                                                <constraint firstAttribute="bottom" secondItem="Eh9-BY-KmM" secondAttribute="bottom" id="Tay-ct-ScO"/>
+                                                <constraint firstItem="Eh9-BY-KmM" firstAttribute="leading" secondItem="JAX-hQ-8d4" secondAttribute="leading" id="dU3-3x-h8E"/>
                                                 <constraint firstItem="FwT-9Q-bJ2" firstAttribute="leading" secondItem="JAX-hQ-8d4" secondAttribute="leading" constant="20" id="huG-Mx-OnR"/>
+                                                <constraint firstAttribute="trailing" secondItem="Eh9-BY-KmM" secondAttribute="trailing" id="vZk-KI-QND"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -300,6 +317,13 @@ Mỡ</string>
                                                         </view>
                                                     </subviews>
                                                 </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjJ-E7-7sM">
+                                                    <rect key="frame" x="0.0" y="-0.5" width="174" height="70"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="invokeStatisticalButton:" destination="-1" eventType="touchUpInside" id="ONG-li-P8Z"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
@@ -406,6 +430,13 @@ cơ thể</string>
                                                         </view>
                                                     </subviews>
                                                 </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21P-hF-Bsz">
+                                                    <rect key="frame" x="0.0" y="-0.5" width="174" height="70"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="invokeStatisticalButton:" destination="-1" eventType="touchUpInside" id="VBs-T8-i0P"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
@@ -502,6 +533,13 @@ cơ thể</string>
                                                         </view>
                                                     </subviews>
                                                 </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keX-Uo-mcN">
+                                                    <rect key="frame" x="0.0" y="-0.5" width="174" height="70"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="invokeBodyImageButton:" destination="-1" eventType="touchUpInside" id="nAj-dU-x7N"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>

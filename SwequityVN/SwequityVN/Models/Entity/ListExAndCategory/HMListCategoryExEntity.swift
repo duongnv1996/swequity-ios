@@ -8,10 +8,6 @@
 
 import UIKit
 
-struct HMListCategoryExEntity: Decodable {
-    let list: Array<HMCategoryExEntity>
-}
-
 struct HMCategoryExEntity: Decodable {
     let id: String
     let title: String

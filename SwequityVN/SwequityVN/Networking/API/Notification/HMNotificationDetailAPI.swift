@@ -12,7 +12,7 @@ import Alamofire
 
 class HMNotificationDetailAPI: HMAPIOperation<HMNotificationDetailAPIResponse> {
     init(id: String) {
-        super.init(request: HMAPIRequest(name: "Notificaiton detail", path: HMURLConstants.notificationAPIPath, method: .get, parameters: .body([
+        super.init(request: HMAPIRequest(name: "Notificaiton detail", path: HMURLConstants.notificationDetailAPIPath, method: .get, parameters: .body([
             "id" : id,
             "user_id" : HMSharedData.userId!])))
     }

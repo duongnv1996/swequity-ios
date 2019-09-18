@@ -22,7 +22,12 @@ class HMBaseVC: UIViewController {
         setupView()
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.isHidden = false
+    }
+    
     func setupView() {
         baseConfig()
     }
@@ -30,6 +35,11 @@ class HMBaseVC: UIViewController {
     // MARK: - Private method
     private func baseConfig() {
         addBaseBackground()
+        
+        if #available(iOS 11, *) {}
+        else {
+            edgesForExtendedLayout = []
+        }
         
         if(self.isKind(of: HMHomeVC.self)) {
             navigationItem.titleView = UIImageView(image: UIImage(named: "logo_SWEATF"))
@@ -63,9 +73,7 @@ class HMBaseVC: UIViewController {
         
         let menuItem = UIBarButtonItem.init(customView: menuView)
         
-        let negativeSpacer = UIBarButtonItem.init(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
-        negativeSpacer.width = -25
-        navigationItem.leftBarButtonItems = [negativeSpacer, menuItem]
+        navigationItem.leftBarButtonItems = [menuItem]
     }
     
     private func addBackNavigationBarbutton() {
@@ -80,9 +88,15 @@ class HMBaseVC: UIViewController {
         
         let backItem = UIBarButtonItem.init(customView: backView)
         
-        let negativeSpacer = UIBarButtonItem.init(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
-        negativeSpacer.width = -25
-        navigationItem.leftBarButtonItems = [negativeSpacer, backItem]
+        navigationItem.leftBarButtonItems = [backItem]
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
+    override var shouldAutorotate: Bool {
+        return false
     }
     
     // MARK: - Action

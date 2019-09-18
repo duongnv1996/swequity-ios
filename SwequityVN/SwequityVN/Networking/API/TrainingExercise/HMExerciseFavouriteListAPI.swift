@@ -11,10 +11,12 @@ import SwiftyJSON
 import Alamofire
 
 class HMExerciseFavouriteListAPI: HMAPIOperation<HMExerciseFavouriteListAPIResponse> {
-    init(id: String) {
-        super.init(request: HMAPIRequest(name: "Favourite exercise list", path: HMURLConstants.listFavouriteAPIPath, method: .get, parameters: .body([
-            "id_user": HMSharedData.userId!,
-            "category_id": id])))
+    init(categoryId: String? = nil) {
+        var parameters = ["id": HMSharedData.userId!]
+        if let categoryId = categoryId {
+            parameters["category_id"] = categoryId
+        }
+        super.init(request: HMAPIRequest(name: "Favourite exercise list", path: HMURLConstants.listFavouriteAPIPath, method: .get, parameters: .body(parameters)))
     }
 }
 

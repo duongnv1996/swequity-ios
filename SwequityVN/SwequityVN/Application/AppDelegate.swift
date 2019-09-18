@@ -15,6 +15,8 @@ import Fabric
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var foodList: HMFoodListEntity?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -37,7 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         HMOneSignalNotificationService.shared.registerOneSignal(launchOptions: launchOptions)
         
         // config
-        hideNaviBarBG()
+        settingNaviBarBG()
+        settingTabBarBG()
         
         // Init root viewcontroller
         var rootVC: UIViewController
@@ -45,7 +48,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             rootVC = UINavigationController(rootViewController: HMSplashVC.create())
             HMSharedData.needDisplaySplash = true
         } else {
-            rootVC = UINavigationController(rootViewController: HMLoginVC.create())
+            if (HMSharedData.userId == nil) {
+                rootVC = UINavigationController(rootViewController: HMLoginVC.create())
+            } else {
+                rootVC = UINavigationController(rootViewController: HMHomeVC.create())
+            }
         }
         HMSystemBoots.instance.changeRoot(window: &window, rootController: rootVC)
         
@@ -75,8 +82,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
     }
     
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        if let window = window,
+            let rootVC = window.rootViewController,
+            let navVC = rootVC as? UINavigationController,
+            let topVC = navVC.topViewController,
+            (topVC.isKind(of: HMBodyChartsVC.self) || topVC.isKind(of: HMCompareImageVC.self)) {
+            return .landscape
+        } else {
+            return .portrait
+        }
+    }
+    
     // MARK: - Private method
-    private func hideNaviBarBG() {
+    private func settingNaviBarBG() {
         // Sets background to a blank/empty image
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         // Sets shadow (line below the bar) to a blank image
@@ -84,6 +103,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Sets the translucent background color
         UINavigationBar.appearance().backgroundColor = .clear
         // Set translucent. (Default value is already true, so this can be removed if desired.)
-        UINavigationBar.appearance().isTranslucent = true
+        if #available(iOS 11, *) {}
+        else {
+            UINavigationBar.appearance().isTranslucent = false
+        }
+    }
+    
+    private func settingTabBarBG() {
+        if #available(iOS 11, *) {}
+        else {
+            UITabBar.appearance().isTranslucent = false
+        }
     }
 }

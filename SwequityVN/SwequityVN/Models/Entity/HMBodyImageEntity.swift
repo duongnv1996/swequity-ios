@@ -9,9 +9,9 @@
 import UIKit
 
 struct HMBodyImageEntity: Decodable {
-    let front: Array<HMBodyImageDetailEntity>
-    let side: Array<HMBodyImageDetailEntity>
-    let back: Array<HMBodyImageDetailEntity>
+    let front: [HMBodyImageDetailEntity]
+    let side: [HMBodyImageDetailEntity]
+    let back: [HMBodyImageDetailEntity]
 }
 
 struct HMBodyImageDetailEntity: Decodable {

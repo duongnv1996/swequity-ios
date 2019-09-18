@@ -19,7 +19,7 @@ class HMFacebookLoginServices: NSObject, HMLoginServices {
     
     // MARK:- Init
     required init(target viewController: UIViewController & HMLoginServicesDelegate) {
-        super.init()
+//        super.init()
         delegate = viewController
     }
     

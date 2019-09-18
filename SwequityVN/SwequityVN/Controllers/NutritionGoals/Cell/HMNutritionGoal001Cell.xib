@@ -91,13 +91,23 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTF-el-xwd">
+                                                <rect key="frame" x="0.0" y="0.0" width="114.5" height="102.5"/>
+                                                <connections>
+                                                    <action selector="didTapEditWeightButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="RU6-H8-bSM"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="QTF-el-xwd" firstAttribute="centerX" secondItem="WYJ-a8-O3m" secondAttribute="centerX" id="65f-TA-KdJ"/>
                                             <constraint firstAttribute="trailing" secondItem="qQw-0a-vv9" secondAttribute="trailing" id="GyT-3V-rhv"/>
                                             <constraint firstItem="qQw-0a-vv9" firstAttribute="leading" secondItem="WYJ-a8-O3m" secondAttribute="leading" id="TiV-rK-Q7A"/>
+                                            <constraint firstItem="QTF-el-xwd" firstAttribute="centerY" secondItem="WYJ-a8-O3m" secondAttribute="centerY" id="dPo-MN-fOr"/>
                                             <constraint firstAttribute="bottom" secondItem="qQw-0a-vv9" secondAttribute="bottom" id="fwI-Ap-emc"/>
+                                            <constraint firstItem="QTF-el-xwd" firstAttribute="height" secondItem="WYJ-a8-O3m" secondAttribute="height" id="j03-Ae-WIO"/>
                                             <constraint firstItem="qQw-0a-vv9" firstAttribute="top" secondItem="WYJ-a8-O3m" secondAttribute="top" id="nC4-eN-Tbm"/>
+                                            <constraint firstItem="QTF-el-xwd" firstAttribute="width" secondItem="WYJ-a8-O3m" secondAttribute="width" id="xYY-R1-osC"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKz-Th-8yK">
@@ -126,12 +136,22 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guI-Fx-hIl">
+                                                <rect key="frame" x="0.0" y="0.0" width="115" height="102.5"/>
+                                                <connections>
+                                                    <action selector="didTapTargetWeekButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="x7R-kQ-JeA"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="Bfw-Fv-UYt" secondAttribute="bottom" id="6at-kn-SlM"/>
+                                            <constraint firstItem="guI-Fx-hIl" firstAttribute="centerX" secondItem="fKz-Th-8yK" secondAttribute="centerX" id="DBN-K0-vLi"/>
                                             <constraint firstAttribute="trailing" secondItem="Bfw-Fv-UYt" secondAttribute="trailing" id="DSq-7e-gAX"/>
+                                            <constraint firstItem="guI-Fx-hIl" firstAttribute="width" secondItem="fKz-Th-8yK" secondAttribute="width" id="HGZ-Rd-LhO"/>
+                                            <constraint firstItem="guI-Fx-hIl" firstAttribute="height" secondItem="fKz-Th-8yK" secondAttribute="height" id="MaE-c2-3o4"/>
                                             <constraint firstItem="Bfw-Fv-UYt" firstAttribute="top" secondItem="fKz-Th-8yK" secondAttribute="top" id="Oa9-Hr-5Zd"/>
+                                            <constraint firstItem="guI-Fx-hIl" firstAttribute="centerY" secondItem="fKz-Th-8yK" secondAttribute="centerY" id="P2h-wL-GLa"/>
                                             <constraint firstItem="Bfw-Fv-UYt" firstAttribute="leading" secondItem="fKz-Th-8yK" secondAttribute="leading" id="iRd-xB-pg5"/>
                                         </constraints>
                                     </view>
@@ -162,13 +182,23 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W15-bc-Ic9">
+                                                <rect key="frame" x="0.0" y="0.0" width="114.5" height="102.5"/>
+                                                <connections>
+                                                    <action selector="didTapRatioFatButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Ou4-uS-8HU"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="N2H-BG-Zyn" firstAttribute="leading" secondItem="iYS-7l-44d" secondAttribute="leading" id="3Bw-9l-Pea"/>
+                                            <constraint firstItem="W15-bc-Ic9" firstAttribute="width" secondItem="iYS-7l-44d" secondAttribute="width" id="DMl-kW-CT5"/>
                                             <constraint firstItem="N2H-BG-Zyn" firstAttribute="top" secondItem="iYS-7l-44d" secondAttribute="top" id="GCP-rI-uAr"/>
+                                            <constraint firstItem="W15-bc-Ic9" firstAttribute="height" secondItem="iYS-7l-44d" secondAttribute="height" id="Hmh-c4-Zr4"/>
+                                            <constraint firstItem="W15-bc-Ic9" firstAttribute="centerY" secondItem="iYS-7l-44d" secondAttribute="centerY" id="N3u-ob-Cfl"/>
                                             <constraint firstAttribute="trailing" secondItem="N2H-BG-Zyn" secondAttribute="trailing" id="cX7-mC-wlF"/>
                                             <constraint firstAttribute="bottom" secondItem="N2H-BG-Zyn" secondAttribute="bottom" id="hEf-IX-Ahi"/>
+                                            <constraint firstItem="W15-bc-Ic9" firstAttribute="centerX" secondItem="iYS-7l-44d" secondAttribute="centerX" id="rGk-Mb-4l4"/>
                                         </constraints>
                                     </view>
                                 </subviews>

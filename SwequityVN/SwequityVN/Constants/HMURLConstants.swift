@@ -31,7 +31,9 @@ class HMURLConstants: NSObject {
     static let listFavouriteAPIPath = "list_favourite.php"
     static let loginFbAPIPath = "loginfb.php"
     static let loginggAPIPath = "logingg.php"
+    
     static let addProgramAPIPath = "add_program.php"
+    
     static let addSessionAPIPath = "add_session.php"
     static let loginAPIPath = "login.php"
     static let addExAPIPath = "add_ex.php"
@@ -56,11 +58,13 @@ class HMURLConstants: NSObject {
     static let updateDetailExAPIPath = "update_detail_ex.php"
     static let totalWeightAPIPath = "total_weight.php"
     static let detailExAPIPath = "detail_ex.php"
-//    http://swequity.online/api/ex_by_day.php?user_id=5&date=2018-12-10
+    static let detailExByDayAPIPath = "ex_by_day.php"
     static let dataBodyAPIPath = "data_body.php"
     static let updateTimeFinishAPIPath = "update_time_finish.php"
     static let updateImageExAPIPath = "update_image_ex.php"
+    
     static let updateFoodAPIPath = "update_food.php"
+    
     static let updatePositionAPIPath = "update_position.php"
     static let updateWorkingAPIPath = "update_working.php"
     static let joinExAPIPath = "join_ex.php"

@@ -24,10 +24,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SEm-ci-him" secondAttribute="trailing" id="DyD-qB-Dtm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SEm-ci-him" secondAttribute="bottom" id="OU5-3j-ZN5"/>
+                            <constraint firstAttribute="trailing" secondItem="SEm-ci-him" secondAttribute="trailing" id="DyD-qB-Dtm"/>
+                            <constraint firstAttribute="bottom" secondItem="SEm-ci-him" secondAttribute="bottom" id="OU5-3j-ZN5"/>
                             <constraint firstItem="SEm-ci-him" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="aOa-SW-a1Y"/>
-                            <constraint firstItem="SEm-ci-him" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jl3-bn-boi"/>
+                            <constraint firstItem="SEm-ci-him" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="jl3-bn-boi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

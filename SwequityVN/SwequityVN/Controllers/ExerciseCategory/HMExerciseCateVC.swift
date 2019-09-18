@@ -16,16 +16,23 @@ class HMExerciseCateVC: HMBaseVC {
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Variables
+    var categoryId: String?
+    var sessionId: String?
+    var type:HMListType = .list
+    
     private let disposeBag = DisposeBag()
-    private let listTasks: BehaviorRelay<[HMExerciseCateEntity]> = BehaviorRelay(value: [])
+    private let listTasks: BehaviorRelay<[HMExDetailEntity]> = BehaviorRelay(value: [])
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        fetchData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        fetchData()
+    }
     // MARK: - Setup views
     override func setupView() {
         super.setupView()
@@ -36,12 +43,32 @@ class HMExerciseCateVC: HMBaseVC {
         tableView.registerNibCellFor(type: HMExerciseCateCell.self)
         
         listTasks.bind(to: tableView.rx.items(cellIdentifier: "HMExerciseCateCell", cellType: HMExerciseCateCell.self)) { row, model, cell in
+            cell.delegate = self
             cell.data = model
             }.disposed(by: disposeBag)
         
-        tableView.rx.modelSelected(HMExerciseCateEntity.self).subscribe(onNext: {task in
+        tableView.rx.modelSelected(HMExDetailEntity.self).subscribe(onNext: { exercise in
             // TODO : Tap To cell
-            print(task.detail)
+            if (self.type == .list) {
+                HMExeciseDetailVC.push(prepare: { vc in
+                    vc.exerciseId = exercise.id
+                })
+            } else {
+                HMAddExerciseInSessionAPI.init(sessionId: self.sessionId ?? "", exId: exercise.id).execute(target: self, success: { (response) in
+                    switch response.errorId {
+                    case HMErrorCode.success.rawValue:
+                        self.pop()
+                        break
+                    case HMErrorCode.error.rawValue:
+                        UIAlertController.showQuickSystemAlert(message: response.message, cancelButtonTitle: "Đồng ý")
+                    default:
+                        break
+                    }
+                }, failure: { (error) in
+                    
+                })
+            }
+            
         }).disposed(by: disposeBag)
         
         tableView.rx.itemSelected
@@ -52,8 +79,32 @@ class HMExerciseCateVC: HMBaseVC {
     
     // MARK: - Management Data
     private func fetchData() {
-        let value = HMExerciseCateEntity(image: UIImage(named: "icon_premium"), title: "Bài tập nữ cho nhóm cơ", detail: "Giống như động tác gập tạ, bài tập này sẽ tác động vào cơ bắp...")
-        listTasks.accept([value,value,value,value,value])
+        
+        if let categoryId = categoryId {
+            HMExerciseListAPI(id: categoryId).execute(target: self, success: {[weak self] (response) in
+                self?.listTasks.accept(response.exList)
+            }) { (error) in
+                UIAlertController.showQuickSystemAlert(message: error.message, cancelButtonTitle: "Đồng ý")
+            }
+        } else {
+            HMExerciseFavouriteListAPI().execute(target: self, success: {[weak self] (response) in
+                self?.listTasks.accept(response.favouriteList)
+            }) { (error) in
+                UIAlertController.showQuickSystemAlert(message: error.message, cancelButtonTitle: "Đồng ý")
+            }
+        }
     }
 
+}
+
+extension HMExerciseCateVC: HMExerciseCateDelegate {
+    func tapToFavorite(data: HMExDetailEntity?, type: HMFavouriteType) {
+        if let data = data {
+            HMExerciseFavouriteAPI(id: data.id, type: type).execute(target: self, success: {[weak self] (response) in
+                self?.fetchData()
+                }, failure: { (error) in
+                    UIAlertController.showQuickSystemAlert(message: error.message, cancelButtonTitle: "Đồng ý")
+            })
+        }
+    }
 }

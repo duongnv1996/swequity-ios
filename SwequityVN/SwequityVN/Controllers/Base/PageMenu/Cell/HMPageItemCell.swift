@@ -57,7 +57,7 @@ class HMPageItemCell: PagingCell {
         if let item = pagingItem as? HMPageItem {
             
             let viewModel = HMPageItemCellViewModel(
-                image: UIImage(named: item.icon),
+                image: UIImage(named: item.icon ?? ""),
                 selected: selected,
                 options: options,
                 title: item.title)

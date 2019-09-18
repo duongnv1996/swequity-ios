@@ -16,6 +16,5 @@ struct HMProgramExDetailEntity: Decodable {
     let date_end: String
     let number_day: String
     let active: String
-    let session: String
-    let listSession: Array<HMSessionExDetailEntity>?
+    let session: [HMSessionExDetailEntity]?
 }

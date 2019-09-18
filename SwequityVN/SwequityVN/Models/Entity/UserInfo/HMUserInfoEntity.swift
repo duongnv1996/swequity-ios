@@ -19,10 +19,10 @@ struct HMUserInfoEntity: Decodable {
     let phone: String
     let birthday: String
     let avatar: String
-    let gender: String
+    let gender: HMGenderType
     let address: String
     let date: String
-    let type: String
+    let type: HMAccountType
     let weight: String
     let height: String
     let fat: String
@@ -36,4 +36,5 @@ struct HMUserInfoEntity: Decodable {
     let image: String?
     let tylemo: String?
     let ex: String?
+    let number_noty: Int?
 }

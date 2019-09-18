@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HMHistoryImageCell" customModule="Develop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="275" height="356"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="275" height="356"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lGL-oa-TJg">
+                        <rect key="frame" x="0.0" y="0.0" width="275" height="275"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="lGL-oa-TJg" secondAttribute="height" multiplier="1:1" id="97E-4h-KLc"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/11/18" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68W-1U-Oew">
+                        <rect key="frame" x="116" y="278" width="43.5" height="16.5"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                        <color key="textColor" red="0.29019607843137252" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="lGL-oa-TJg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9aR-Bg-Vcb"/>
+                <constraint firstItem="68W-1U-Oew" firstAttribute="centerX" secondItem="lGL-oa-TJg" secondAttribute="centerX" id="LaR-dH-p9e"/>
+                <constraint firstItem="lGL-oa-TJg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ysr-IP-Neh"/>
+                <constraint firstAttribute="trailing" secondItem="lGL-oa-TJg" secondAttribute="trailing" id="cve-9P-lmH"/>
+                <constraint firstItem="68W-1U-Oew" firstAttribute="top" secondItem="lGL-oa-TJg" secondAttribute="bottom" constant="3" id="hua-ug-2Xi"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="275" height="356"/>
+            <connections>
+                <outlet property="dateLabel" destination="68W-1U-Oew" id="5Zz-Wy-5ea"/>
+                <outlet property="imageView" destination="lGL-oa-TJg" id="9Hi-Af-oAh"/>
+            </connections>
+            <point key="canvasLocation" x="300.72463768115944" y="92.410714285714278"/>
+        </collectionViewCell>
+    </objects>
+</document>

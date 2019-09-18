@@ -20,7 +20,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="275" id="KGk-i7-Jjw" customClass="HMNutritionGoal005Cell" customModule="AppStore" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="275" id="KGk-i7-Jjw" customClass="HMNutritionGoal005Cell" customModule="AppStore" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="275"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -282,63 +282,7 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FeK-Mv-3WL" customClass="HMShadowView" customModule="AppStore" customModuleProvider="target">
                                                 <rect key="frame" x="160" y="0.0" width="144" height="50"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="do5-jt-gse">
-                                                        <rect key="frame" x="20" y="6" width="114" height="38"/>
-                                                        <subviews>
-                                                            <view contentMode="scaleToFill" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="uZx-PV-e7g">
-                                                                <rect key="frame" x="0.0" y="0.0" width="22" height="38"/>
-                                                                <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sTQ-uN-3He">
-                                                                        <rect key="frame" x="0.0" y="2" width="17" height="16"/>
-                                                                        <color key="backgroundColor" red="0.49411764705882355" green="0.82745098039215681" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="17" id="i77-J9-4X5"/>
-                                                                            <constraint firstAttribute="height" constant="16" id="r8Z-KT-BPK"/>
-                                                                        </constraints>
-                                                                    </view>
-                                                                </subviews>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <constraints>
-                                                                    <constraint firstItem="sTQ-uN-3He" firstAttribute="top" secondItem="uZx-PV-e7g" secondAttribute="top" constant="2" id="2qX-Ke-yW3"/>
-                                                                    <constraint firstItem="sTQ-uN-3He" firstAttribute="leading" secondItem="uZx-PV-e7g" secondAttribute="leading" id="44e-JX-62E"/>
-                                                                    <constraint firstAttribute="width" constant="22" id="weK-jC-lUb"/>
-                                                                </constraints>
-                                                            </view>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="oFl-O9-2yk">
-                                                                <rect key="frame" x="26" y="0.0" width="88" height="38"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khác" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YA9-VA-Dgt">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="88" height="20"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="20" id="PDD-jy-uA8"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
-                                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12% - 294 Cal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jt1-lS-127">
-                                                                        <rect key="frame" x="0.0" y="24" width="88" height="14"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="14" id="gDP-Lc-7OQ"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
-                                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="do5-jt-gse" firstAttribute="top" secondItem="FeK-Mv-3WL" secondAttribute="top" constant="6" id="18I-gW-wIJ"/>
-                                                    <constraint firstItem="do5-jt-gse" firstAttribute="leading" secondItem="FeK-Mv-3WL" secondAttribute="leading" constant="20" id="IbZ-dj-x2U"/>
-                                                    <constraint firstAttribute="bottom" secondItem="do5-jt-gse" secondAttribute="bottom" constant="6" id="Pq6-fT-RTL"/>
-                                                    <constraint firstAttribute="trailing" secondItem="do5-jt-gse" secondAttribute="trailing" constant="10" id="bXR-IU-Wpl"/>
-                                                </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
                                                         <size key="value" width="0.0" height="0.0"/>
@@ -407,12 +351,10 @@
                 <outlet property="kindFood001Label" destination="M44-CZ-yav" id="eMB-MD-tm0"/>
                 <outlet property="kindFood002Label" destination="LpP-2l-seg" id="oJR-XQ-xmQ"/>
                 <outlet property="kindFood003Label" destination="OsP-g0-fdB" id="n31-F1-MtN"/>
-                <outlet property="kindFood004Label" destination="YA9-VA-Dgt" id="5VU-fi-m8g"/>
                 <outlet property="titleLabel" destination="1fZ-ce-jqJ" id="6Ne-5e-117"/>
                 <outlet property="valueFood001Label" destination="nvd-HP-70C" id="Drx-jy-RLT"/>
                 <outlet property="valueFood002Label" destination="BMQ-02-afX" id="S0S-oI-O5c"/>
                 <outlet property="valueFood003Label" destination="BnP-GC-3ni" id="hSR-2K-ZlA"/>
-                <outlet property="valueFood004Label" destination="jt1-lS-127" id="2G9-Zh-JtV"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="159.70982142857142"/>
         </tableViewCell>

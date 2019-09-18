@@ -11,16 +11,18 @@ import Parchment
 
 struct HMPageItem: PagingItem, Hashable, Comparable {
     
-    let icon: String
+    let icon: String?
     let title: String
     let index: Int
-    let image: UIImage?
+    var image: UIImage? = nil
     
-    init(title: String, icon: String, index: Int) {
+    init(title: String, icon: String? = nil, index: Int) {
         self.title = title
         self.icon = icon
         self.index = index
-        self.image = UIImage(named: icon)
+        if let icon = icon {
+            self.image = UIImage(named: icon)
+        }
     }
     
     func hash(into hasher: inout Hasher) {

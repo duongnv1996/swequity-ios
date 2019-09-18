@@ -9,18 +9,19 @@
 import UIKit
 import Parchment
 
-class HMBasePageMenuVC: HMBaseVC {
+class HMBasePageMenuVC: HMBaseVC, PagingViewControllerDelegate, PagingViewControllerDataSource {
 
     var viewControllers: [UIViewController] = []
     var menuTitles: [String] = []
     var iconTitles: [String] = []
+    
+    let pagingViewController = PagingViewController<HMPageItem>()
     
     @IBOutlet weak var containerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let pagingViewController = PagingViewController<HMPageItem>()
         pagingViewController.menuItemSource = .class(type: HMPageItemCell.self)
         pagingViewController.menuItemSize = .sizeToFit(minWidth: 150.0, height: 60.0)
         pagingViewController.dataSource = self
@@ -35,30 +36,34 @@ class HMBasePageMenuVC: HMBaseVC {
         pagingViewController.view.fixInView(containerView)
         pagingViewController.didMove(toParent: self)
     }
-
-}
-
-extension HMBasePageMenuVC: PagingViewControllerDataSource {
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        pagingViewController.reloadMenu()
+    }
     func pagingViewController<T>(_ pagingViewController: PagingViewController<T>, viewControllerForIndex index: Int) -> UIViewController {
         return viewControllers[index]
     }
     
     func pagingViewController<T>(_ pagingViewController: PagingViewController<T>, pagingItemForIndex index: Int) -> T {
-        return HMPageItem(title: menuTitles[index], icon: iconTitles[index], index: index) as! T
+        if iconTitles.count > 0 {
+            return HMPageItem(title: menuTitles[index], icon: iconTitles[index], index: index) as! T
+        } else {
+            return HMPageItem(title: menuTitles[index], index: index) as! T
+        }
     }
     
     func numberOfViewControllers<T>(in: PagingViewController<T>) -> Int {
         return menuTitles.count
     }
     
-}
-
-extension HMBasePageMenuVC: PagingViewControllerDelegate {
+    func pagingViewController<T>(_ pagingViewController: PagingViewController<T>, willScrollToItem pagingItem: T, startingViewController: UIViewController, destinationViewController: UIViewController) {
+        
+    }
     
     func pagingViewController<T>(_ pagingViewController: PagingViewController<T>, didScrollToItem pagingItem: T, startingViewController: UIViewController?, destinationViewController: UIViewController, transitionSuccessful: Bool) where T : PagingItem, T : Comparable, T : Hashable {
         
     }
-    
-}
 
+}

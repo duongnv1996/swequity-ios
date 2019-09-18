@@ -11,12 +11,11 @@ import SwiftyJSON
 import Alamofire
 
 class HMAddTrainingSessionAPI: HMAPIOperation<HMAddTrainingSessionAPIResponse> {
-    init(title: String, dateStart: String, dateEnd: String) {
-        super.init(request: HMAPIRequest(name: "Add program", path: HMURLConstants.addProgramAPIPath, method: .post, parameters: .body([
-            "id": HMSharedData.userId!,
-            "title": title,
-            "date_start": dateStart,
-            "date_end": dateEnd])))
+    init(programId: String, name: String, date: String) {
+        super.init(request: HMAPIRequest(name: "Add sesion", path: HMURLConstants.addSessionAPIPath, method: .post, parameters: .body([
+            "program_id": programId,
+            "name": name,
+            "date": date])))
     }
 }
 

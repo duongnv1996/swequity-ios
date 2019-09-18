@@ -20,14 +20,14 @@ class HMImageDiaryAPI: HMAPIOperation<HMImageDiaryAPIResponse> {
 struct HMImageDiaryAPIResponse: HMAPIResponseProtocol {
     var errorId: Int
     var message: String
-    var bodyInfo: HMBodyInfoEntity?
+    var bodyImages: HMBodyImageEntity?
     
     init(json: JSON) {
         errorId = json["errorId"].int ?? 0
         message = json["message"].string ?? ""
         do {
             let data = try json["data"].rawData(options: .prettyPrinted)
-            bodyInfo = try JSONDecoder().decode(HMBodyInfoEntity.self, from: data)
+            bodyImages = try JSONDecoder().decode(HMBodyImageEntity.self, from: data)
         } catch {
             print(error)
         }

@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+protocol HMCountDownVCDelegate: NSObject {
+    func updateValueRoundEx()
+}
 class HMCountDownVC: HMBaseVC {
 
     // MARK: - Outlets
@@ -16,7 +18,13 @@ class HMCountDownVC: HMBaseVC {
     // MARK: - Variables
     private var timer: Timer?
     private var endTime: TimeInterval?
-    var timeCountDown: Double = 10.00
+    var timeCountDown: Double = 1.0
+    
+    var sessionId:String?
+    var exId:String?
+    var listExercise: [HMSetsDetailEntity] = []
+    
+    weak var delegate:HMCountDownVCDelegate?
     
     // MARK: - Lifecycles
     override func viewDidLoad() {
@@ -34,12 +42,25 @@ class HMCountDownVC: HMBaseVC {
     
     @objc private func getRemainTime() {
         timeCountDown = timeCountDown - 0.01
-        print(String(format: "%02.2f", timeCountDown))
         
         if timeCountDown <= 0 {
             timer?.invalidate()
             timer = nil
-            dismiss(animated: true, completion: nil)
+            HMUpdatePositionExAPI.init(sessionId: self.sessionId ?? "", exId: self.exId ?? "", numberSets: String(self.listExercise.count)).execute(target: self, success: { (response) in
+                switch response.errorId {
+                case HMErrorCode.success.rawValue:
+                    break
+                case HMErrorCode.error.rawValue:
+                    UIAlertController.showQuickSystemAlert(message: response.message, cancelButtonTitle: "Đồng ý")
+                default:
+                    break
+                }
+                self.dismiss(animated: true, completion: nil)
+                self.delegate?.updateValueRoundEx()
+            }, failure: { (error) in
+                self.dismiss(animated: true, completion: nil)
+                self.delegate?.updateValueRoundEx()
+            })
         } else {
             DispatchQueue.main.async {
                 let remainTime = String(format: "%.2f", self.timeCountDown)

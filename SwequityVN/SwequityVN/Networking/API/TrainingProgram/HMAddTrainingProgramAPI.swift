@@ -12,7 +12,7 @@ import Alamofire
 
 class HMAddTrainingProgramAPI: HMAPIOperation<HMAddTrainingProgramAPIResponse> {
     init(title: String, dateStart: String, dateEnd: String) {
-        super.init(request: HMAPIRequest(name: "Add session", path: HMURLConstants.addSessionAPIPath, method: .post, parameters: .body([
+        super.init(request: HMAPIRequest(name: "Add program", path: HMURLConstants.addProgramAPIPath, method: .post, parameters: .body([
             "id": HMSharedData.userId!,
             "title": title,
             "date_start": dateStart,

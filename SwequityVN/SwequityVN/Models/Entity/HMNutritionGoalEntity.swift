@@ -27,18 +27,22 @@ class HMNutritionGoal001Entity: NSObject {
         self.weightCurrent = weightCurrent
         self.weightTarget = weightTarget
         self.fatPercent = fatPercent
-        self.currentDate = currentDate
-        self.targetDate = targetDate
+        
+        let newCurrentDateFormat = Date.getDateBy(string: currentDate, format: Date.dateTimeFullFormat)
+        self.currentDate = newCurrentDateFormat?.stringBy(format: Date.dateFormat) ?? ""
+        let newTargetDateFormat = Date.getDateBy(string: targetDate, format: Date.dateTimeFullFormat)
+        self.targetDate = newTargetDateFormat?.stringBy(format: Date.dateFormat) ?? ""
     }
 }
 
 class HMNutritionGoal002Entity: NSObject {
     var titleName: String = ""
-    var foods: [String] = []
+    var foods: [HMFoodDetailEntity] = []
+    var favFoods: [HMFoodDetailEntity] = []
     var subTitleName: String = ""
     var caloValue: String = ""
     
-    init(titleName: String = "", foods: [String] = [], subTitleName: String = "", caloValue: String = "") {
+    init(titleName: String = "", foods: [HMFoodDetailEntity] = [], favFoods: [HMFoodDetailEntity] = [], subTitleName: String = "", caloValue: String = "") {
         self.titleName = titleName
         self.foods = foods
         self.subTitleName = subTitleName
@@ -48,9 +52,9 @@ class HMNutritionGoal002Entity: NSObject {
 
 class HMNutritionGoal003Entity: NSObject {
     var titleName: String = ""
-    var foods: [String] = []
+    var foods: [HMFoodDetailEntity] = []
     
-    init(titleName: String = "", foods: [String] = []) {
+    init(titleName: String = "", foods: [HMFoodDetailEntity] = []) {
         self.titleName = titleName
         self.foods = foods
     }
@@ -80,10 +84,10 @@ class HMNutritionGoal005Entity: NSObject {
 
 class ElementFood: NSObject {
     var titleName: String = ""
-    var percent: String = ""
-    var calo: String = ""
+    var percent: Int = 0
+    var calo: Double = 0
     
-    init(titleName: String = "", percent: String = "", calo: String = "") {
+    init(titleName: String = "", percent: Int = 0, calo: Double = 0) {
         self.titleName = titleName
         self.percent = percent
         self.calo = calo

@@ -10,6 +10,7 @@ import UIKit
 
 class HMForgotPasswordVC: HMBaseVC {
 
+    @IBOutlet weak var phoneNumberTf: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,6 +20,7 @@ class HMForgotPasswordVC: HMBaseVC {
         HMPrivacyAPI.init().execute(target: self, success: { (response) in
             switch response.errorId {
             case HMErrorCode.success.rawValue:
+                HMPrivacyVC.push()
                 break
             case HMErrorCode.error.rawValue:
                 UIAlertController.showQuickSystemAlert(message: response.message, cancelButtonTitle: "Đồng ý")
@@ -34,6 +36,7 @@ class HMForgotPasswordVC: HMBaseVC {
         HMTermAPI.init().execute(target: self, success: { (response) in
             switch response.errorId {
             case HMErrorCode.success.rawValue:
+                HMTermVC.push()
                 break
             case HMErrorCode.error.rawValue:
                 UIAlertController.showQuickSystemAlert(message: response.message, cancelButtonTitle: "Đồng ý")
@@ -43,6 +46,11 @@ class HMForgotPasswordVC: HMBaseVC {
         }, failure: { (error) in
             
         })
+    }
+    
+    @IBAction func didTapResenPassword(_ sender: UIButton) {
+        guard let phoneNumber = phoneNumberTf.text, !phoneNumberTf.text!.isEmpty else { return }
+        HMForgetPasswordAPI.init(phone: phoneNumber).execute(target: self)
     }
     
 }

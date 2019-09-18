@@ -9,6 +9,6 @@
 import UIKit
 
 struct HMBodyDataWithMonthEntity: Decodable {
-    let month: String
-    let value: String
+    let month: Int
+    let value: String?
 }

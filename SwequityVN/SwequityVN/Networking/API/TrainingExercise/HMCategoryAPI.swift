@@ -19,7 +19,7 @@ class HMCategoryAPI: HMAPIOperation<HMCategoryAPIResponse> {
 struct HMCategoryAPIResponse: HMAPIResponseProtocol {
     var errorId: Int
     var message: String
-    var categoryList: [HMListCategoryExEntity] = []
+    var categoryList: [HMCategoryExEntity] = []
     
     init(json: JSON) {
         errorId = json["errorId"].int ?? 0
@@ -27,7 +27,7 @@ struct HMCategoryAPIResponse: HMAPIResponseProtocol {
         do {
             categoryList = try json["data"].arrayValue.map({
                 let data = try $0.rawData(options: .prettyPrinted)
-                return try JSONDecoder().decode(HMListCategoryExEntity.self, from: data)
+                return try JSONDecoder().decode(HMCategoryExEntity.self, from: data)
             })
         } catch {
             print(error)

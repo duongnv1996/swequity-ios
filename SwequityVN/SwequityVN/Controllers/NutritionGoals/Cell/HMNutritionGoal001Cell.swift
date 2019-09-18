@@ -10,6 +10,9 @@ import UIKit
 
 protocol HMNutritionGoal001Delegate: NSObjectProtocol {
     func tapToEdit()
+    func didTapEditWeightButton()
+    func didTapTargetWeekButton()
+    func didTapRatioFatButton()
 }
 
 class HMNutritionGoal001Cell: UITableViewCell {
@@ -38,6 +41,20 @@ class HMNutritionGoal001Cell: UITableViewCell {
         delegate?.tapToEdit()
     }
     
+    
+    @IBAction func didTapEditWeightButton(_ sender: UIButton) {
+        delegate?.didTapEditWeightButton()
+    }
+    
+    
+    @IBAction func didTapTargetWeekButton(_ sender: UIButton) {
+        delegate?.didTapTargetWeekButton()
+    }
+    
+    @IBAction func didTapRatioFatButton(_ sender: UIButton) {
+        delegate?.didTapRatioFatButton()
+    }
+    
     var data: AnyObject? {
         didSet {
             if data is HMNutritionGoal001Entity {
@@ -52,18 +69,18 @@ class HMNutritionGoal001Cell: UITableViewCell {
         subTitle001Label.text = dto.subTitle001
         subTitle002Label.text = dto.subTitle002
         subTitle003Label.text = dto.subTitle003
-        value001Label.attributedText = getAttriBute(value: dto.weightCurrent)
-        value002Label.attributedText = getAttriBute(value: dto.weightTarget)
+        value001Label.attributedText = getAttriBute(value: dto.weightCurrent, color: UIColor(red: 139, green: 87, blue: 42))
+        value002Label.attributedText = getAttriBute(value: dto.weightTarget, color: UIColor(red: 126, green: 211, blue: 33))
         value003Label.text = dto.fatPercent + "%"
         date001Label.text = dto.currentDate
         date002Label.text = dto.targetDate
     }
     
     
-    private func getAttriBute(value: String) -> NSMutableAttributedString {
+    private func getAttriBute(value: String, color: UIColor) -> NSMutableAttributedString {
         let attributedString = NSMutableAttributedString(string: "\(value)kg", attributes: [
             .font: UIFont(name: "OpenSans-Semibold", size: 28.0)!,
-            .foregroundColor: UIColor(red: 139.0 / 255.0, green: 87.0 / 255.0, blue: 42.0 / 255.0, alpha: 1.0)
+            .foregroundColor: color
             ])
         attributedString.addAttribute(.font, value: UIFont(name: "OpenSans-Semibold", size: 13.0)!, range: NSRange(location: value.count, length: 2))
         return attributedString

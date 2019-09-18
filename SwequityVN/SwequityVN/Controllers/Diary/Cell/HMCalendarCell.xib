@@ -28,7 +28,7 @@
                         <rect key="frame" x="0.0" y="4" width="100" height="92"/>
                         <color key="backgroundColor" red="0.99607843137254903" green="0.90588235294117647" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GfA-Xn-sTp" customClass="HMShadowView" customModule="AppStore" customModuleProvider="target">
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GfA-Xn-sTp" customClass="HMCircleView" customModule="AppStore" customModuleProvider="target">
                         <rect key="frame" x="4" y="4" width="92" height="92"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -50,6 +50,10 @@
                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                 <real key="value" value="1"/>
                             </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="cornerTopLeft" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="cornerTopRight" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="cornerBottomLeft" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="cornerBottomRight" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPB-Hc-sSc">
@@ -58,6 +62,19 @@
                         <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ns-D2-i2S">
+                        <rect key="frame" x="48" y="66" width="4" height="4"/>
+                        <color key="backgroundColor" red="0.31366565819999997" green="0.88820183279999998" blue="0.75898295640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="4" id="432-hG-ltl"/>
+                            <constraint firstAttribute="width" constant="4" id="elL-j5-PDz"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
             </view>
             <constraints>
@@ -72,7 +89,9 @@
                 <constraint firstItem="oTR-4R-T20" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="ZQe-tW-sGq"/>
                 <constraint firstItem="GfA-Xn-sTp" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="fvx-N1-878"/>
                 <constraint firstItem="GfA-Xn-sTp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="gRj-f5-o1J"/>
+                <constraint firstItem="3Ns-D2-i2S" firstAttribute="top" secondItem="xPB-Hc-sSc" secondAttribute="bottom" constant="4" id="lw6-Kw-Iaf"/>
                 <constraint firstItem="GfA-Xn-sTp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="mmI-rH-o6J"/>
+                <constraint firstItem="3Ns-D2-i2S" firstAttribute="centerX" secondItem="xPB-Hc-sSc" secondAttribute="centerX" id="oYm-N9-c9d"/>
                 <constraint firstAttribute="bottom" secondItem="GfA-Xn-sTp" secondAttribute="bottom" constant="4" id="rDc-aA-wLn"/>
                 <constraint firstItem="GfA-Xn-sTp" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="tHa-7v-EwT"/>
             </constraints>
@@ -80,6 +99,7 @@
             <size key="customSize" width="98" height="102"/>
             <connections>
                 <outlet property="dayLabel" destination="xPB-Hc-sSc" id="3ag-WD-q5e"/>
+                <outlet property="eventView" destination="3Ns-D2-i2S" id="iWg-5e-XHo"/>
                 <outlet property="selectedView" destination="oTR-4R-T20" id="4TG-15-kcy"/>
                 <outlet property="todayView" destination="GfA-Xn-sTp" id="8hK-7M-fDN"/>
             </connections>

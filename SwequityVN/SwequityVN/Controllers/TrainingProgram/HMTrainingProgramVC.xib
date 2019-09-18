@@ -10,8 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HMTrainingProgramVC" customModule="AppStore" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HMTrainingProgramVC" customModule="Develop" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="rHC-CK-LTe" id="RG3-aj-Ulr"/>
+                <outlet property="detailView" destination="OQL-pe-vbH" id="mrN-ug-VwV"/>
                 <outlet property="pageControl" destination="A3O-Zv-Sj6" id="50M-TE-w3m"/>
                 <outlet property="pagerView" destination="jDZ-by-8ar" id="IaG-DA-bm5"/>
                 <outlet property="tableFooterView" destination="Rq9-NK-GVs" id="b4g-bc-JKR"/>
@@ -24,46 +26,72 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pp6-wV-Mhd">
-                    <rect key="frame" x="8" y="68" width="398" height="118"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQL-pe-vbH">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jDZ-by-8ar" customClass="TYCyclePagerView">
-                            <rect key="frame" x="0.0" y="0.0" width="398" height="100"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pp6-wV-Mhd">
+                            <rect key="frame" x="8" y="24" width="398" height="118"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jDZ-by-8ar" customClass="TYCyclePagerView">
+                                    <rect key="frame" x="0.0" y="0.0" width="398" height="100"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="vNT-xa-70Q"/>
+                                    </constraints>
+                                    <viewLayoutGuide key="safeArea" id="xEr-SC-EGJ"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A3O-Zv-Sj6" customClass="TYPageControl">
+                                    <rect key="frame" x="0.0" y="108" width="398" height="10"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="10" id="riw-ZS-bf2"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
                             <constraints>
-                                <constraint firstAttribute="height" constant="100" id="vNT-xa-70Q"/>
+                                <constraint firstAttribute="trailing" secondItem="jDZ-by-8ar" secondAttribute="trailing" id="DfK-qE-jxs"/>
+                                <constraint firstItem="A3O-Zv-Sj6" firstAttribute="leading" secondItem="pp6-wV-Mhd" secondAttribute="leading" id="My0-FG-d3Z"/>
+                                <constraint firstAttribute="trailing" secondItem="A3O-Zv-Sj6" secondAttribute="trailing" id="YrH-BQ-Ly8"/>
+                                <constraint firstItem="jDZ-by-8ar" firstAttribute="leading" secondItem="pp6-wV-Mhd" secondAttribute="leading" id="mEW-mI-lqt"/>
                             </constraints>
-                            <viewLayoutGuide key="safeArea" id="xEr-SC-EGJ"/>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A3O-Zv-Sj6" customClass="TYPageControl">
-                            <rect key="frame" x="0.0" y="108" width="398" height="10"/>
+                        </stackView>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yZm-2X-9WN">
+                            <rect key="frame" x="0.0" y="162" width="414" height="656"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="10" id="riw-ZS-bf2"/>
-                            </constraints>
-                        </view>
+                        </tableView>
                     </subviews>
-                    <constraints>
-                        <constraint firstAttribute="trailing" secondItem="jDZ-by-8ar" secondAttribute="trailing" id="DfK-qE-jxs"/>
-                        <constraint firstItem="A3O-Zv-Sj6" firstAttribute="leading" secondItem="pp6-wV-Mhd" secondAttribute="leading" id="My0-FG-d3Z"/>
-                        <constraint firstAttribute="trailing" secondItem="A3O-Zv-Sj6" secondAttribute="trailing" id="YrH-BQ-Ly8"/>
-                        <constraint firstItem="jDZ-by-8ar" firstAttribute="leading" secondItem="pp6-wV-Mhd" secondAttribute="leading" id="mEW-mI-lqt"/>
-                    </constraints>
-                </stackView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yZm-2X-9WN">
-                    <rect key="frame" x="0.0" y="206" width="414" height="656"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </tableView>
+                    <constraints>
+                        <constraint firstItem="yZm-2X-9WN" firstAttribute="leading" secondItem="OQL-pe-vbH" secondAttribute="leading" id="MMI-Yc-Nrb"/>
+                        <constraint firstAttribute="trailing" secondItem="yZm-2X-9WN" secondAttribute="trailing" id="NZP-os-TQa"/>
+                        <constraint firstAttribute="bottom" secondItem="yZm-2X-9WN" secondAttribute="bottom" id="Qhe-4G-mgu"/>
+                        <constraint firstItem="yZm-2X-9WN" firstAttribute="top" secondItem="pp6-wV-Mhd" secondAttribute="bottom" constant="20" id="hhO-um-5Nr"/>
+                        <constraint firstItem="pp6-wV-Mhd" firstAttribute="top" secondItem="OQL-pe-vbH" secondAttribute="top" constant="24" id="nYj-Ww-VdS"/>
+                        <constraint firstItem="pp6-wV-Mhd" firstAttribute="leading" secondItem="OQL-pe-vbH" secondAttribute="leading" constant="8" id="pLp-H7-5Ok"/>
+                        <constraint firstAttribute="trailing" secondItem="pp6-wV-Mhd" secondAttribute="trailing" constant="8" id="wZR-EQ-LaQ"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="rHC-CK-LTe">
+                    <rect key="frame" x="8" y="68" width="398" height="814"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YJe-VP-rG5">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="yZm-2X-9WN" firstAttribute="top" secondItem="pp6-wV-Mhd" secondAttribute="bottom" constant="20" id="1wL-zN-hOH"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yZm-2X-9WN" secondAttribute="trailing" id="Mcm-eF-6HC"/>
-                <constraint firstItem="yZm-2X-9WN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="S5K-6l-SBP"/>
-                <constraint firstItem="pp6-wV-Mhd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="V3V-OY-RyH"/>
-                <constraint firstItem="pp6-wV-Mhd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="abC-dJ-JOI"/>
-                <constraint firstAttribute="trailing" secondItem="pp6-wV-Mhd" secondAttribute="trailing" constant="8" id="eK5-lo-GP5"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yZm-2X-9WN" secondAttribute="bottom" id="nQY-L0-8kt"/>
+                <constraint firstItem="OQL-pe-vbH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="26I-Pr-DzA"/>
+                <constraint firstItem="rHC-CK-LTe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="AwU-Rj-3Mu"/>
+                <constraint firstItem="rHC-CK-LTe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="EI5-qw-siP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="OQL-pe-vbH" secondAttribute="bottom" id="QuP-7i-m1U"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OQL-pe-vbH" secondAttribute="trailing" id="VJH-GO-9fq"/>
+                <constraint firstAttribute="trailing" secondItem="rHC-CK-LTe" secondAttribute="trailing" constant="8" id="asa-X4-4gp"/>
+                <constraint firstItem="rHC-CK-LTe" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="20" id="bel-RH-cdl"/>
+                <constraint firstItem="OQL-pe-vbH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="lbR-Z6-4Ci"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="131.8840579710145" y="120.53571428571428"/>
@@ -80,6 +108,9 @@
                     <state key="normal" title="            Thêm buổi tập" backgroundImage="icon_addBTN">
                         <color key="titleColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="invokeAddSessionButton:" destination="-1" eventType="touchUpInside" id="5h6-c1-ks4"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

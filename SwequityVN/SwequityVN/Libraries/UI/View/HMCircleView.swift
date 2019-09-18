@@ -33,7 +33,7 @@ import UIKit
         if cornerTopRight { cornerList.insert(.topRight) }
         if cornerBottomLeft { cornerList.insert(.bottomLeft) }
         if cornerBottomRight { cornerList.insert(.bottomRight) }
-        let roundedPath = UIBezierPath(roundedRect: CGRect(x: borderWidth / 2, y: borderWidth / 2, width: rect.width - borderWidth, height: rect.height - borderWidth), byRoundingCorners: cornerList, cornerRadii: CGSize(width: cornerRadius, height: cornerRadius))
+        let roundedPath = UIBezierPath(roundedRect: CGRect(x: borderWidth / 2, y: borderWidth / 2, width: rect.width - borderWidth, height: rect.height - borderWidth), byRoundingCorners: cornerList, cornerRadii: CGSize(width: rect.width/2, height: rect.width/2))
         if !cornerTopLeft {
             roundedPath.move(to: CGPoint(x: 0, y: borderWidth / 2))
             roundedPath.addLine(to: CGPoint(x: borderWidth / 2, y: borderWidth / 2))
